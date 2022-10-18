@@ -1,3 +1,3 @@
 # pJulianV.github.io
-Personal Website & Futuro Portafolio
+Personal Website, CV & Futuro Portafolio
 https://pjulianv.github.io
