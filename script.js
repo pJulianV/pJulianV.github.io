@@ -1,4 +1,3 @@
-
 function encriptar(){
     var arrNewString = (document.getElementById("texto").value).split("");
     for (i = 0; i < arrNewString.length; i++){
@@ -12,7 +11,7 @@ function encriptar(){
     for (i = 0; i < arrNewString.length; i++){
         newString += arrNewString[i];
     }
-    document.getElementById("mensaje").innerHTML = newString;
+    document.getElementById("textarea").innerHTML = newString;
 }
 
 // Es mejor separar cada letra en una lista y tratar cada una de ellas en una funcion
@@ -26,29 +25,26 @@ function desencriptar(){
         newString = newString.replace("ober","o");
         newString = newString.replace("ufat","u");
     }
-    document.getElementById("mensaje").innerHTML = newString;
+    document.getElementById("textarea").innerHTML = newString;
 }
 
-function copiarAlPortapapeles(id_elemento) {
+    // // Establecemos las variables
+    // var mensaje = document.getElementById("mensaje");
+    // var answer = document.getElementById("copyAnswer");
+    // var copy   = document.getElementById("copyBlock");
 
-  // Crea un campo de texto "oculto"
-  var aux = document.createElement("input");
-
-  // Asigna el contenido del elemento especificado al valor del campo
-  aux.setAttribute("value", document.getElementById(id_elemento).innerHTML);
-
-  // Añade el campo a la página
-  document.body.appendChild(aux);
-
-  // Selecciona el contenido del campo
-  aux.select();
-
-  // Copia el texto seleccionado
-  document.execCommand("copy");
-
-  // Elimina el campo de la página
-  document.body.removeChild(aux);
-
-}
+    // copy.addEventListener('click', function(e) {
+    //    // Sleccionando el texto
+    //    mensaje.select(); 
+    //    try {
+    //        // Copiando el texto seleccionado
+    //        var successful = document.execCommand('copy');
+     
+    //        if(successful) answer.innerHTML = 'Copiado!';
+    //        else answer.innerHTML = 'Incapaz de copiar!';
+    //    } catch (err) {
+    //        answer.innerHTML = 'Browser no soportado!';
+    //    }
+    // });
 
 // expected output: "The quick brown fox jumps over the lazy monkey. If the dog reacted, was it really lazy?"
