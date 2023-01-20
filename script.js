@@ -3,7 +3,6 @@ function ocultarDiv() {
 }
 
 function encriptar(){
-    ocultarDiv()
     var arrNewString = (document.getElementById("texto").value).split("");
     for (i = 0; i < arrNewString.length; i++){
         arrNewString[i] = arrNewString[i].replace("e","enter");
@@ -21,7 +20,6 @@ function encriptar(){
 
 // Es mejor separar cada letra en una lista y tratar cada una de ellas en una funcion
 function desencriptar(){
-    ocultarDiv()
     var newString = document.getElementById("texto").value;
     var arrNewString = newString.split("");
     for (i = 0; i < arrNewString.length; i++){
