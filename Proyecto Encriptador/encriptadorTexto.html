@@ -24,18 +24,24 @@
         <div class="container">
             <!-- <h1>Encriptador de Texto</h1> -->
             <!-- Agregar linea que separa titulo debajo -->
-            <textarea type="text" name="texto" id="texto" placeholder="Ingrese el texto aqui"></textarea>
+            <textarea class="camposTexto" type="text" name="texto" id="texto" placeholder="Ingrese el texto aqui"></textarea>
             <br>
             <p>&#10003 Solo letras minusculas y sin acentos</p>
             <button class="botonEncriptar" onclick="encriptar()">Encriptar</button>
             <button class="botonDesencriptar"onclick="desencriptar()">Desencriptar</button>
         
         </div>
-        <div class="resultado">
-             <textarea id="textarea"></textarea>
-             <img src="img/Muñeco.png" alt="No se ha encontrado texto">
+        <section class="resultado">
+             <textarea class="camposTexto" id="textarea" readonly="readonly"></textarea>
+             <div id="sinResultado"class="sinResultado">
+                <div class="textoSinResultado">
+                    <h3 >Ningún mensaje fue encontrado</h3>
+                    <p>Ingresa el texto que desees encriptar o desencriptar.</p>
+                </div> 
+                 <img class="imgSinResultado" src="img/Muñeco.png" alt="No se ha encontrado texto">
+             </div>
             <button id="copyBlock">Copiar</button> <span id="copyAnswer"></span>
-        </div>
+        </section>
     </div>
 </body>
   <script language="JavaScript">

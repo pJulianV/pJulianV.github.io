@@ -7,7 +7,7 @@ body {
     font-family: 'Raleway', sans-serif;
 }
 button{
-    border-radius: 10px;
+    border-radius: 15px;
     width: 250px;
     height: 45px;
     transition: 1s all ;
@@ -30,15 +30,21 @@ textarea{
     font-size: 20px;
 
 }
-#textarea{
-    background-color: rgb(248, 248, 248);
-    width: 520px;
-    height: 270px;
-    padding: 20px;
-    border-radius: 10px;
+
+.camposTexto{
     border: none;
     outline:none;
     resize: none;
+}
+#textarea{
+    background-color: rgb(248, 248, 248);
+    width: 520px;
+    height: 400px;
+    padding: 20px;
+    border-radius: 20px;
+    cursor: text;
+    color: transparent;
+    text-shadow: 0 0 0 #000000;
 }
 
 
@@ -46,11 +52,7 @@ textarea{
     width: 520px;
     height: 270px;
     padding: 20px;
-    border-radius: 5px;
-    outline:none;
-    border: none;
     background-color: #FDEEDC;
-    resize: none;
     cursor: pointer;
     color: #E38B29;
     font-size: 20px;
@@ -86,6 +88,7 @@ textarea{
     color: rgb(228, 234, 253);
 }
 
+
 .botonDesencriptar{
     color: #E38B29;
     margin-left: 10px;
@@ -96,8 +99,20 @@ textarea{
     color: #E38B29;
     position: absolute;
     top: 370px;
-    right: 20px;
+    right: 190px;
     border: #E38B29 solid 1px;
+}
+
+.div_hide {
+  opacity: 0;
+}
+
+.textoSinResultado {
+    width: 250px;
+    position: absolute;
+    top: 70px;
+    right: 325px;
+    text-align: center;
 }
 
 .imgSinResultado{

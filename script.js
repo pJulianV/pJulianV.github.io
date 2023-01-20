@@ -1,10 +1,15 @@
+function ocultarDiv() {
+    document.getElementById(sinResultado).style.visibility = "hidden";
+}
+
 function encriptar(){
+    ocultarDiv()
     var arrNewString = (document.getElementById("texto").value).split("");
     for (i = 0; i < arrNewString.length; i++){
-        arrNewString[i] = arrNewString[i].replace("i","imes");
-        arrNewString[i] = arrNewString[i].replace("a","ai");
         arrNewString[i] = arrNewString[i].replace("e","enter");
+        arrNewString[i] = arrNewString[i].replace("i","imes");
         arrNewString[i] = arrNewString[i].replace("o","ober");
+        arrNewString[i] = arrNewString[i].replace("a","ai");
         arrNewString[i] = arrNewString[i].replace("u","ufat");
     }
     newString = ""
@@ -16,6 +21,7 @@ function encriptar(){
 
 // Es mejor separar cada letra en una lista y tratar cada una de ellas en una funcion
 function desencriptar(){
+    ocultarDiv()
     var newString = document.getElementById("texto").value;
     var arrNewString = newString.split("");
     for (i = 0; i < arrNewString.length; i++){

@@ -1,13 +1,13 @@
 /* Estilo Similar a un Periodico */
 body {
-    background-color: rgb(243,245,252);
+    background-color: #FDEEDC;
     font-family: 'Inconsolata', monospace;
     font-family: 'Open Sans', sans-serif;
     font-family: 'Poppins', sans-serif;
     font-family: 'Raleway', sans-serif;
 }
 button{
-    border-radius: 10px;
+    border-radius: 15px;
     width: 250px;
     height: 45px;
     transition: 1s all ;
@@ -30,34 +30,38 @@ textarea{
     font-size: 20px;
 
 }
+
+.camposTexto{
+    border: none;
+    outline:none;
+    resize: none;
+}
 #textarea{
     background-color: rgb(248, 248, 248);
     width: 520px;
     height: 270px;
     padding: 20px;
-    border-radius: 10px;
-    border: none;
+    border-radius: 20px;
+    cursor: text;
+    color: transparent;
+    text-shadow: 0 0 0 #000000;
 }
 
-#textarea:active{
-    border-color: #ffffff;
-}
 
 #texto {
     width: 520px;
     height: 270px;
     padding: 20px;
-    border-radius: 5px;
-    border: none;
-    background-color: rgb(243,245,252);
-    resize: none;
+    background-color: #FDEEDC;
     cursor: pointer;
+    color: #E38B29;
+    font-size: 20px;
+    font-weight: 600;
 }
 
-#texto:active {
-    border-color: rgb(243,245,252);
+::placeholder{
+    color: #E38B29;
 }
-
 
 .grid{
     display: grid;
@@ -80,19 +84,40 @@ textarea{
 }
 .botonEncriptar {
     border: none;
-    background-color: rgb(10,56,113);
+    background-color: #E38B29;
     color: rgb(228, 234, 253);
 }
 
+
 .botonDesencriptar{
-    color: rgb(37, 92, 255);
-    border-color:rgb(37, 92, 255);
+    color: #E38B29;
     margin-left: 10px;
-    border: 10px ;
+    border: #E38B29 solid 1px;
 }
 
 #copyBlock{
+    color: #E38B29;
     position: absolute;
     top: 370px;
-    right: 20px;
+    right: 190px;
+    border: #E38B29 solid 1px;
+}
+
+.div_hide {
+  opacity: 0;
+}
+
+.textoSinResultado {
+    width: 250px;
+    position: absolute;
+    top: 70px;
+    right: 325px;
+    text-align: center;
+}
+
+.imgSinResultado{
+    width: 40%;
+    position: absolute;
+    top: 45px;
+    right: 80px;
 }
