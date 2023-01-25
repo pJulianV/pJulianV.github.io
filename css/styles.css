@@ -1,0 +1,58 @@
+@import url('https://fonts.googleapis.com/css2?family=Inconsolata:wght@200&family=Open+Sans:wght@300;400;700&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: 'Inconsolata', monospace;
+    font-family: 'Open Sans', sans-serif;
+    font-family: 'Poppins', sans-serif;
+    font-family: 'Raleway', sans-serif;
+    overflow-x: hidden;
+    background-color: #d9c8c8;
+}
+
+header{
+    width: 100%;
+    height: 70px;
+    background-color: #000000;
+    color: rgb(231, 241, 250);
+}
+
+nav {
+    position: absolute;
+    top: 25px;
+    right: 20px;
+}
+
+nav li{
+    display: inline-block;
+    margin: 0 0 0 10px;
+    width: 125px;
+    height: 20px;
+}
+
+nav a{
+    border-radius: 10px;
+    text-decoration: none;
+    color: #ffffff;
+    padding: 10px 20px;
+    transition: 0.3s all;
+    font-weight: 600;
+}
+nav a:hover{
+    background-color: #ffffff;
+    color: #000000;
+}
+
+.tituloPrincipal{
+    text-align: center;
+    margin: 20px;
+}
+
+.proyectos{
+    text-align: center;
+}

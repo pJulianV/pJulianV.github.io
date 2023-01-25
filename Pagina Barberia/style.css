@@ -1,0 +1,370 @@
+/* El mejor codigo que se puede escribir es aquel que funciona, es sencillo de entender, esta ordenado y es escalable */
+
+/* * En el CSS es IMPORTANTE mantener ordenar los estilos basandose en el orden la pagina*/
+body{
+    font-family: 'Inconsolata', monospace;
+    font-family: 'Open Sans', sans-serif;
+    font-family: 'Raleway', sans-serif;
+}
+
+header {
+    background-color: #e7e7e7;
+}
+
+nav li{
+    display: inline;
+    margin: 0 0 0 15px;
+}
+
+nav a {
+    text-transform: uppercase;
+    padding: 10px 20px;
+    color: #ffffff;
+    font-weight: bold;
+    font-size: 22px;
+    text-decoration: none;
+    border-radius: 20px;
+    transition: 0.3s all ;
+}
+
+nav a:hover{
+    background-color: #e7e7e7;
+    color: #000000;
+}
+
+nav {
+    position: absolute;
+    top: 80px;
+    right: 60px;
+}
+
+.logoBarberia{
+    width: 125px;
+    padding: 10px;
+    margin-left: 10px;
+}
+
+.caja{
+    width: auto;
+    position: relative;
+    background-color: #1e1c1c;
+}
+
+.productos{
+    width: 940px;
+    margin: 0 auto;
+    padding: 50px;
+}
+
+.productos li {
+    display: inline-block;
+    text-align: center;
+    width: 30%;
+    vertical-align: top;
+    margin: 0 1.5%;
+    padding: 30px 20px;
+    box-sizing: border-box; /* Limitar el contenido dentro del borde sin sobrepasar */
+    border: #000000 2px solid;
+    border-radius: 10px;
+}
+
+.productos li:hover{
+    border-color: #baa100;
+}
+
+
+.productos li:active {
+    border-color: #838383;
+}
+
+
+.productos h2 {
+    font-size: 30px;
+    font-weight: bold;
+}
+
+.productos li:hover h2{
+    font-size: 33px;
+}
+
+.productoDescripcion{
+    font-size: 17px;
+}
+
+.productoPrecio{
+    font-size: 22px;
+    font-weight: bold;
+    margin-top: 10px;
+}
+
+footer{
+    text-align: center;
+    background: url(img/bg.jpg);
+    padding: 40px;
+}
+
+.copyright{
+    color: #ffffff;
+    font-size: 13px;
+    margin: 20px;
+}
+
+
+form{
+    margin: 40px 0 0 30%;
+}
+
+form label, form legend{
+    display: block;
+    font-size: 20px;
+    margin: 0 0 10px;
+}
+
+.inputPadre{
+    display: block;
+    margin: 0 0 20px;
+    padding: 10px 40px;
+    width: 50%;
+}
+
+.checkbox{
+    margin: 20px 0;
+}
+
+/* Jerarquia: 1. => Inline  /  2. => ID /  3. => Class   /  4. =>  Etiqueta */
+
+/* 5 */
+
+/* 
+form p {
+    color: blue;
+}
+ */
+ 
+/* 4 */
+/* p {
+    color: red;
+} */
+/* 3 */
+/* .test {
+    color: yellow
+} */
+/* 2 */
+/* p.test{
+    color: orange;
+} */
+
+/* 1 */
+/* #test{
+    color: pink;
+} */
+
+.enviar {
+    width: 40%;
+    padding: 15px 5px;
+    font-size: 18px;
+    font-weight: bold;
+    color: #ffffff;
+    background-color: #211f1f;
+    border: none;
+    border-radius: 5px;
+    transition: 1s all ;
+    cursor: pointer;
+    margin: 20px 0 0 70px;
+}
+
+.enviar:hover{
+    transform: scale(1.05) rotate(1deg) ;    
+}
+
+.enviar:active{
+    background-color: #c2c2c2;
+}
+
+table {
+    margin: 20px auto;
+}
+
+thead {
+    background-color: #3b3b3b;
+    color: #ffffff;
+    font-weight: bold;
+}
+
+td, th {
+    border: 1px solid #000000;
+    padding:  8px 15px;
+}
+
+/* CSS del Home */
+.banner {
+    width: 100%;
+}
+
+/* Seleciona unicamente los parrafos 'hijos' del main */
+/* main > p {
+    font-size: smaller;
+}
+
+img + p {
+    font-size: bold;
+}
+
+img ~ p{
+    font-style: italic;
+}
+
+.principal p:not(#mision) {
+    background: #baa100;
+
+} */
+
+.tituloPrincipal{
+    text-align: center;
+    font-size: 2em;
+    margin: 0 0 1em;
+    clear: left;
+}
+
+/* Seudoclases */
+
+/*.tituloPrincipal::first-letter{ 
+     font-weight: bold;
+}
+
+.tituloPrincipal::before{
+    content: "[";
+}
+
+.tituloPrincipal::after{
+    content: "]";
+}
+p::first-line{
+    font-style: italic;
+} */
+
+.principal{
+    background-color: rgb(255, 255, 255);
+    padding: 20px;
+    width: 940px;
+    margin: 2em auto;
+}
+.principal p{
+    margin: 0 0 1em;
+}
+
+.principal strong{
+    font-weight: bold;
+}
+
+.principal em{
+    font-style: italic;
+}
+/* .utensilios{
+    width: 17%;
+    float: left;
+    margin: 0 2em 0 0;
+} */
+
+/* Calculo dentro de la funcion calc -> Para que los elementos se adecuen ¿responsive?*/
+.utensilios{
+    width: calc(20% - (26px));
+    float: left;
+    margin: 0 2em 0 0;
+    transition: 200ms;
+}
+
+.utensilios:hover{
+    box-shadow: inset 0 0 5px black;
+}
+
+.mapa{
+    padding: 3em 0;
+    background: linear-gradient(to bottom, rgb(16, 26, 80) 0%, rgb(7, 16, 64)  100%);
+    color: #ffffff;
+    font-weight: 600;
+}
+
+.mapa p{
+    text-align: center;
+    margin: 0 0 2em;
+}
+
+.mapaContenido{
+    width: 940px;
+    margin: 0 auto ;
+}
+
+.diferenciales{
+    padding: 3em 0;
+    background: linear-gradient(to bottom, #ffffff 0%, #dddddd 100%);
+}
+
+.contenidoDiferenciales{
+    width: 640px;
+    margin: 0 auto; 
+}
+
+.listaDiferenciales{
+    width: 30%;
+    height: 196px;
+    padding: 3%;
+    display: inline-block;
+    vertical-align: top;
+    background-color: #1b1a1a;
+    color: #ffffff;
+}
+
+.item{
+    line-height: 1.5;
+    font-size: 16px;
+    font-weight: 500;
+}
+
+.item::before{
+    content: "\2605";
+}
+
+.item:first-child{
+    font-weight: bold;
+    font-style: italic;
+}
+
+.item:nth-child(3){
+    font-style: italic;
+}
+
+.imgDiferenciales{
+    width: 60%;
+    transition: 400ms;
+}
+
+.imgDiferenciales:hover{
+    opacity: 0.9;
+}
+
+.video{
+    text-align: center;
+    padding: 3em 0;
+    margin: 0 auto;
+    background: linear-gradient(to bottom, rgb(113, 24, 24) 0%, rgb(89, 10, 10) 100%);
+}
+
+@media screen and (max-width: 1000px) {
+    .caja, .principal, .mapaContenido, .contenidoDiferenciales, .video{
+        width: auto;
+    }
+    h1 {
+        text-align: center;
+    }
+    nav { 
+        position: static;
+    }
+    .imgDiferenciales{
+        width: 100%;
+    }
+    .listaDiferenciales{
+        width: 94%;
+    }
+    
+}
