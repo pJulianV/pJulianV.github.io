@@ -4,6 +4,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    scroll-behavior: smooth;
 }
 
 body{
@@ -12,13 +13,13 @@ body{
     font-family: 'Poppins', sans-serif;
     font-family: 'Raleway', sans-serif;
     overflow-x: hidden;
-    background-color: #fff0f0;
+    background-color: #DDDDDD;
 }
 
 header{
     width: 100%;
     height: 70px;
-    background-color: #000000;
+    background-color: #1B262C;
     color: rgb(231, 241, 250);
 }
 
@@ -40,7 +41,7 @@ nav a{
     text-decoration: none;
     color: #ffffff;
     padding: 10px 20px;
-    transition: 0.3s all;
+    transition: 0.5s all;
     font-weight: 600;
 }
 nav a:hover{
@@ -50,10 +51,26 @@ nav a:hover{
 
 .tituloPrincipal{
     margin: 20px;
+    color: #222831;
+}
+/* Home */
+
+.home{
+    height: 100px;
 }
 
+/* About Me */
+.aboutMe{
+    height: 100px;
+}
+
+/* Portfolio */
 .listaProyectos{
     text-align: center;
+}
+
+.listaProyectos p{
+    color: #222831;
 }
 
 .proyecto{
@@ -62,17 +79,27 @@ nav a:hover{
     width: 300px;
     height: 200px;
     display: inline-block;
-    border: #000000 1px solid;
+    border: #222831 1px solid;
     border-radius: 5px;
 }
 
+.proyecto:hover{
+    border-color: #3282B8;
+    color: #3282B8;
+}
 .proyecto a{
     text-decoration: none;
-    color: #101010;
+    color: #222831;
+}
+
+/* Contact */
+
+.contact{
+    height: 100px;
 }
 
 .linkFigma{
     text-decoration: none;
-    color: #101010;
+    color: #222831;
     margin: 0 0 0 40px;
 }
