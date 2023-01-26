@@ -53,10 +53,14 @@ nav a:hover{
     margin: 20px;
 }
 
-.proyectos{
+.listaProyectos{
     text-align: center;
 }
 
 .proyecto{
     margin: 20px;
+}
+
+.linkFigma{
+    text-align: center;
 }
