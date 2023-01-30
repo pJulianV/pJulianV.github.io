@@ -80,7 +80,11 @@ nav a:hover{
 
 /* About Me */
 .aboutMe{
-    height: 100px;
+    height: auto;
+}
+
+.contenidoAboutMe{
+    padding: 40px;
 }
 
 /* Portfolio */
