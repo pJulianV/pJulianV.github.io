@@ -15,14 +15,14 @@ body{
     font-family: 'Poppins', sans-serif;
     font-family: 'Raleway', sans-serif;
     overflow-x: hidden;
-    background-color: #DDDDDD;
+    background-color: #ECF9FF;
 }
 
 header{
     width: 100%;
     height: 70px;
-    background-color: #151515;
-    color: rgb(231, 241, 250);
+    background-color:#ECF9FF;
+    color: #222831;
 }
 
 nav {
@@ -41,14 +41,14 @@ nav li{
 nav a{
     border-radius: 10px;
     text-decoration: none;
-    color: #ffffff;
+    color: #222831;
     padding: 10px 20px;
     transition: 0.5s all;
     font-weight: 600;
 }
 nav a:hover{
-    background-color: #ffffff;
-    color: #000000;
+    background-color: #222831;
+    color: #ECF9FF;
 }
 
 .tituloPrincipal{
@@ -58,7 +58,18 @@ nav a:hover{
 /* Home */
 
 .home{
-    height: 100px;
+    width: 100%;
+    height: 500px;
+    background-image: url('img/mountains.jpg');
+}
+
+.tituloPresentacion{
+    position: absolute;
+    top: 250px;
+    right: 10%;
+    font-size: 50px;
+    font-weight: 700;
+    margin: 0 0 0 0;
 }
 
 /* About Me */
@@ -78,7 +89,7 @@ nav a:hover{
 .proyecto{
     margin: 20px;
     padding: 10px;
-    width: 300px;
+    width: 250px;
     height: 200px;
     display: inline-block;
     border: #222831 1px solid;
