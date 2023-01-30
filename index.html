@@ -15,6 +15,7 @@
 </head>
 <body>
     <header>
+        <img class="logojv" src="img/logoFondoBlanco.png" alt="logoJV">
         <nav>
             <ul class="menu">
                 <li><a href="#home">Home</a></li>
@@ -26,7 +27,7 @@
     </header>
     <main>
         <section id="home" class="home">
-            <h1 class="tituloPresentacion" >I´m Julian Vargas,<br>Web Developer</h1>
+            <h1 class="tituloPresentacion">I´m Julian Vargas.<br>Front-end <br> Developer.</h1>
             <div class="contenidoHome">
 
             </div>
@@ -35,7 +36,7 @@
         <section id="aboutMe" class="aboutMe">
             <h2 class="tituloPrincipal">What I do</h2>
             <div class="contenidoAboutMe">
-
+                <p>I'm a JavaScript Developer, I have used technologies such as node.js, react.js, mondoDB and express.</p>
             </div>
         </section>
 
@@ -55,17 +56,47 @@
                         <h3><a href="">Marcadores Deportivas</a></h3>
                         <p>NodeJS - MongoDB</p>
                     </li>
+                    <!-- <li class="proyecto">
+                        <h3><a href="">Base de Datos Hospital</a></h3>
+                        <p>NodeJS - MongoDB</p>
+                    </li> -->
                 </ul>
             </div>
         </section>
 
         <section id="contact" class="contact">
             <h2 class="tituloPrincipal">Contact</h2>
-            <div class="contenidoContact">
+            
+            <form action="">
+                <label for="nombre">Nombre</label>
+                <input type="text" id="nombre" required>
 
-            </div>
+                <label for="correo">Correo</label>
+                <input type="email" id="correo" required>
+                
+                <label for="mensaje">Mensaje</label>
+                <textarea name="mensaje" id="mensaje" cols="30" rows="10" required></textarea>
+
+                <input type="submit" value="Enviar Formulario" class="enviar">
+            </form>
         </section>
         <p><a rel="noopener" target="_blank"class="linkFigma" href="https://www.figma.com/file/6RsVqafuwJeb2KKaJVhdO8/Portfolio-pJulianv.github?node-id=2%3A213&t=fKlBncUkV5rdPyjU-0">*Figma del Portafolio</a></p>
     </main>
 </body>
+<footer>
+    <div class="icons">
+        <a rel="noopener" target="_blank" href="https://github.com/pJulianV">
+            <img class="icon" src="img/bxl-github.svg" alt="github">
+        </a>
+        <a rel="noopener" target="_blank" href="https://www.linkedin.com/in/julian-david-vargas-avendaño-139b05234/">
+            <img class="icon" src="img/bxl-linkedin-square.svg" alt="linkedin">
+        </a>
+        <a rel="noopener" target="_blank" href="https://twitter.com/JulianVargasAv">
+            <img class="icon" src="img/bxl-twitter.svg" alt="twitter">
+        </a>
+        <a rel="noopener" target="_blank" href="">
+            <img class="icon" src="img/bxs-envelope.svg" alt="email">
+        </a>
+    </div>
+</footer>
 </html>
