@@ -39,7 +39,7 @@ nav li{
 }
 
 nav a{
-    border-radius: 10px;
+    border-radius: 20px;
     text-decoration: none;
     color: #222831;
     padding: 10px 20px;
@@ -47,8 +47,8 @@ nav a{
     font-weight: 600;
 }
 nav a:hover{
-    background-color: #222831;
-    color: #ECF9FF;
+    background-color: #0e3147;
+    color: #d6e1e7;
 }
 
 .tituloPrincipal{
