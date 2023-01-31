@@ -57,8 +57,8 @@ nav a:hover{
 }
 
 .tituloPrincipal{
-    margin: 20px;
     color: #222831;
+    margin: 20px 0;
 }
 /* Home */
 
@@ -80,54 +80,117 @@ nav a:hover{
 
 /* About Me */
 .aboutMe{
-    height: 350px;
-    margin: 20px;
+    height: 400px;
+    margin: 60px;
     padding: 40px;
+    display: flex;
 }
 
 .contenidoAboutMe{
-    margin: 0 0 0 20px;
+    margin: 50px 20px;
+    padding: 20px;
     width: 50%;
+    /* top: 50%;
+    transform: translateY(-50%); */
 }
 
 .imagenAboutMe{
     width: 40%;
-    float: right;
 }
 
 /* Portfolio */
+.portfolio{
+    /* background: linear-gradient(#061f35); */
+    background-color: #01050d;
+    padding: 40px;
+}
+
+.portfolio .tituloPrincipal{
+    text-align: center;
+    color: #d6e1e7;
+}
+
 .listaProyectos{
     text-align: center;
 }
 
-.listaProyectos p{
-    color: #222831;
+.listaProyectos li {
+    color: #d6e1e7;
 }
+
+.listaProyectos p{
+    color: #d6e1e7;
+    font-weight: 500;
+}
+
+.imgProyecto{
+    width: 100%;
+}
+
 
 .proyecto{
     margin: 20px;
-    padding: 10px;
-    width: 250px;
-    height: 200px;
+    padding: 20px;
     display: inline-block;
-    border: #222831 1px solid;
-    border-radius: 5px;
+    border: #30363d 1px solid;
+    background-color: #0d1117;
+    width: 250px;
 }
 
 .proyecto:hover{
-    border-color: #3282B8;
-    color: #3282B8;
+    border-color: #3c4248;
+    background-color: #141920;
 }
 .proyecto a{
     text-decoration: none;
-    color: #222831;
+    color: #d6e1e7;
 }
 
 /* Contact */
 
 .contact{
-    
+    padding: 30px;
+}
+
+.contact .tituloPrincipal{
     text-align: center;
+}
+
+form{  
+    margin: 0 30%;
+}
+
+form label {
+    display: block;
+    margin: 10px 0;
+}
+
+.inputContacto{
+    display: block;
+    padding: 10px ;
+    width: 100%;
+}
+
+.enviar{
+    display: flex;
+    justify-content: center;
+    margin: 30px auto;
+    padding: 10px;
+    width: 60%;
+    border-radius: 20px;
+    border: none;
+    color: #d6e1e7;
+    background-color: #061f35;
+    transition: 0.3s all;
+}
+
+.enviar:hover{
+    background-color: #0e3147;
+}
+
+.enviar:active{
+    background-color: #21618c;
+    color: #d6e1e7;
 }
 
 .linkFigma{
@@ -140,7 +203,7 @@ nav a:hover{
 
 footer{
     width: 100%;
-    background-color: #0e3147;
+    background-color: #061f35;
     text-align: center;
 }
 
