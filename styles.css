@@ -122,11 +122,16 @@ nav a:hover{
 }
 
 .listaProyectos a{
-    background-color: #222e35;
+    background-color: #373e41;
     margin: 10px;
     padding: 10px;
     border-radius: 5px;
     border: 1px solid #3f464d;
+    transition: 0.3s all;
+}
+
+.listaProyectos a:hover {
+    background-color: #484f52;
 }
 
 .imgProyecto{
