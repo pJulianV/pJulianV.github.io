@@ -118,6 +118,15 @@ nav a:hover{
 .listaProyectos p{
     color: #d6e1e7;
     font-weight: 500;
+    margin: 20px 0;
+}
+
+.listaProyectos a{
+    background-color: #222e35;
+    margin: 10px;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #3f464d;
 }
 
 .imgProyecto{
