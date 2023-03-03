@@ -7,3 +7,12 @@ btnEnvio.addEventListener('click', function(e) {
     const mensaje = document.getElementById('mensaje').value;
     window.location.href = 'mailto:julianvargastrb@gmail.com' + correo + '?subject=' + nombre + '&body=' + mensaje;
 })
+
+function menuResponsive() {
+  var x = document.getElementById("myTopnav");
+  if (x.className === "topnav") {
+    x.className += " responsive";
+  } else {
+    x.className = "topnav";
+  }
+}

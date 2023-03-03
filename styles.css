@@ -18,6 +18,10 @@ body{
     background-color: #ECF9FF;
 }
 
+
+
+/* Header */
+
 header{
     width: 100%;
     height: 70px;
@@ -33,34 +37,75 @@ header{
 
 nav {
     position: absolute;
-    top: 25px;
-    right: 20px;
+    top: 10px;
+    right: 10px;
 }
 
 nav li{
     display: inline-block;
     margin: 0 20px;
-
-    height: 20px;    
+    height: 30px;    
 }
 
-nav a{
-    border-radius: 20px;
-    text-decoration: none;
-    color: #222831;
-    padding: 10px 20px;
-    transition: 0.5s all;
-    font-weight: 600;
-}
-nav a:hover{
-    background-color: #0e3147;
-    color: #d6e1e7;
-}
 
 .tituloPrincipal{
     color: #222831;
     margin: 20px 0;
 }
+/* Menu Responsive */
+
+
+.topnav {
+  overflow: hidden;
+}
+
+.topnav li{
+    margin: 0 0 0 2rem;
+}
+
+.topnav a {
+  text-align: center;
+  color: #041524;
+  border-radius: 20px;
+  text-decoration: none;
+  color: #222831;
+  padding: 10px 20px;
+  transition: 0.5s all;
+  font-weight: 600;
+}
+
+.topnav a:hover{
+    background-color: #0e3147;
+    color: #d6e1e7;
+}
+
+.topnav .iconMenu {
+  display: none;
+}
+
+@media screen and (max-width: 780px) {
+  .topnav a {display: none;}
+  .topnav a.iconMenu {
+    float: right;
+    display: block;
+  }
+}
+
+@media screen and (max-width: 780px) {
+  .topnav.responsive {position: relative;}
+  .topnav.responsive .iconMenu {
+    position: absolute;
+    right: 0;
+    top: 0;
+  }
+  .topnav.responsive a {
+    float: none;
+    display: block;
+    text-align: left;
+  }
+}
+
+
 /* Home */
 
 .home{
@@ -81,8 +126,8 @@ nav a:hover{
 
 .tituloPresentacion{
     position: absolute;
-    top: 200px;
-    right: 40px;
+    top: 25%;
+    right: 5%;
     font-size: 50px;
     font-weight: 900;
     margin: 0 0 0 0;
@@ -96,8 +141,6 @@ nav a:hover{
 
 /* About Me */
 .aboutMe{
-    height: 400px;
-    display: flex;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -117,6 +160,37 @@ nav a:hover{
     width: 58%;
     object-fit: cover;
     object-position: bottom;
+}
+
+@media screen and (min-width: 0px) {
+    .aboutMe{
+        display: flex;
+        flex-direction: column;
+        height: auto;
+    }   
+    .contenidoAboutMe{
+        padding: 0%;
+    }
+    .imagenAboutMe{
+        width: 100%;
+    }
+}
+
+@media screen and (min-width: 780px) {
+    .aboutMe{
+
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+    }
+
+
+    .imagenAboutMe{
+        width: 58%;
+        object-fit: cover;
+        object-position: bottom;
+    }
 }
 
 /* Skills */
@@ -290,7 +364,7 @@ footer{
     justify-content: space-between;
     align-items: center;
     display: flex;
-    padding: 0 1rem;
+    padding: .5rem 1rem;
 }
 
 .imgJVBlanco{
@@ -299,9 +373,10 @@ footer{
 
 .icon{
     filter: invert(1);
-    padding: 15px;
+    padding: 10px;
+    margin: 0 0 0 20px;
     height: 70px;
-    transition: all 0.3s;
+    transition: all 0.5s;
     border-radius: 100%;
 }
 
@@ -310,10 +385,3 @@ footer{
     background-color: #ffffff;
 }
 
-@media screen and (min-width: 0px) {
-    
-}
-
-@media screen and (min-width: 780px) {
-    
-}

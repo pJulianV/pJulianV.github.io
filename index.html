@@ -12,6 +12,8 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inconsolata:wght@200&family=Open+Sans:wght@300;400;700&family=Poppins:wght@300&family=Raleway:wght@300&display=swap"   rel="stylesheet">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 
 <script src="script.js"></script>
@@ -20,13 +22,30 @@
     <header>
         <img id="logo" class="logojv" src="img/logoFondoBlanco.png" alt="logoJV">
         <nav>
-            <ul class="menu">
-                <li><a href="#home">Home</a></li>
-                <li><a href="#aboutMe">What I do</a></li>
-                <li><a href="#skills">Skills</a></li>
-                <li><a href="#portfolio">Portfolio</a></li>
-                <li><a href="#contact">Contact</a></li>
-            </ul>
+            <div class="topnav" id="myTopnav">
+                <ul>
+                    <li>
+                        <a href="#home">Home</a>
+                    </li>
+                    <li>
+                        <a href="#aboutMe">What I do</a>
+                    </li>
+                    <li>
+                        <a href="#skills">Skills</a>
+                    </li>
+                    <li>
+                        <a href="#portfolio">Portfolio</a>
+                    </li>
+                    <li>
+                        <a href="#contact">Contact</a>
+                    </li>
+                    <li>
+                        <a href="javascript:void(0);" class="iconMenu" onclick="menuResponsive()">
+                            <i class="fa fa-bars"></i>
+                        </a>
+                    </li>
+                </ul>
+            </div>
         </nav>
     </header>
     <main>
