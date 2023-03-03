@@ -127,6 +127,9 @@ nav a:hover{
 
 .listaProyectos{
     text-align: center;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
 }
 
 .listaProyectos li {
@@ -146,19 +149,25 @@ nav a:hover{
     border-radius: 5px;
     border: 1px solid #3f464d;
     transition: 0.3s all;
+
 }
 
 .listaProyectos a:hover {
     background-color: #484f52;
 }
 
+.proyectos{
+    display: flex;
+    flex-direction: column;
+    margin: 20px;
+}
+
 .imgProyecto{
-    width: 100%;
+    max-width: 250px;
 }
 
 
 .proyecto{
-    margin: 20px;
     padding: 20px;
     display: inline-block;
     border: #30363d 1px solid;
@@ -181,6 +190,11 @@ nav a:hover{
 
 .contact{
     padding: 30px;
+    background-image: url(img/avion.png);
+    background-position: center;
+    background-size: 50%;
+    background-repeat: no-repeat;
+    
 }
 
 .contact .tituloPrincipal{
@@ -188,19 +202,29 @@ nav a:hover{
 }
 
 form{  
-    margin: 0 30%;
+    margin: 0 20%;
 }
 
 form label {
+    font-size: 120%;
     display: block;
-    margin: 10px 0;
+    margin: 2rem 0 1rem;
+    
 }
 
 .inputContacto{
+    opacity: 0.9;
     display: block;
     padding: 10px ;
     width: 100%;
+    border-radius: 5px;
+    border: 1px solid #797979;
     resize: none;
+    font-family: 'Inconsolata', monospace;
+    font-family: 'Open Sans', sans-serif;
+    font-family: 'Poppins', sans-serif;
+    font-family: 'Raleway', sans-serif;
+    font-size: 1.05rem;
 }
 
 .enviar{
@@ -233,12 +257,19 @@ form label {
 
 /* Footer */
 
+
 footer{
     width: 100%;
     background-color: #061f35;
-    text-align: center;
+    justify-content: space-between;
+    align-items: center;
+    display: flex;
+    padding: 0 1rem;
 }
 
+.imgJVBlanco{
+    max-width: 5rem;
+}
 
 .icon{
     filter: invert(1);
