@@ -301,6 +301,13 @@ footer{
     filter: invert(1);
     padding: 15px;
     height: 70px;
+    transition: all 0.3s;
+    border-radius: 100%;
+}
+
+.icon:hover{
+    filter: none;
+    background-color: #ffffff;
 }
 
 @media screen and (min-width: 0px) {
