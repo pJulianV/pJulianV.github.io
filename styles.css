@@ -69,30 +69,55 @@ nav a:hover{
     background-image: url('img/mountains.jpg') ;
 }
 
+
+/* @keyframes animatename{
+  0%{
+    transform: translateX(5px);
+  }
+  100%{
+    transform: translateX(0);
+  }
+} */
+
 .tituloPresentacion{
     position: absolute;
     top: 200px;
-    right: 5%;
+    right: 40px;
     font-size: 50px;
     font-weight: 900;
     margin: 0 0 0 0;
     color: #061f35;
+
+    /* animation: animatename 1s linear ;
+    animation: animation-name animation-duration animation-direction animation-iteration-count */
 }
+
+
 
 /* About Me */
 .aboutMe{
     height: 400px;
-    margin: 60px;
-    padding: 40px;
     display: flex;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
+.descripcionAboutMe{
+    margin: 20px 0 ;
+}
 .contenidoAboutMe{
-    margin: 50px 20px;
-    padding: 20px;
+    padding: 4rem;
+    margin:  20px;
     width: 50%;
+    text-align: center;
 }
 
+.imagenAboutMe{
+    width: 58%;
+    object-fit: cover;
+    object-position: bottom;
+}
 
 /* Skills */
 .skills{
@@ -189,7 +214,7 @@ nav a:hover{
 /* Contact */
 
 .contact{
-    padding: 30px;
+    padding: 1rem;
     background-image: url(img/avion.png);
     background-position: center;
     background-size: 50%;
@@ -233,15 +258,16 @@ form label {
     margin: 30px auto;
     padding: 10px;
     width: 60%;
-    border-radius: 20px;
+    border-radius: .75rem;
     border: none;
     color: #d6e1e7;
-    background-color: #061f35;
+    background-color: #041524;
     transition: 0.3s all;
 }
 
 .enviar:hover{
     background-color: #0e3147;
+    width: 61%;
 }
 
 .enviar:active{
@@ -260,7 +286,7 @@ form label {
 
 footer{
     width: 100%;
-    background-color: #061f35;
+    background-color: #041524;
     justify-content: space-between;
     align-items: center;
     display: flex;
