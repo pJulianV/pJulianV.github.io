@@ -39,9 +39,9 @@ nav {
 
 nav li{
     display: inline-block;
-    margin: 0 0 0 10px;
-    width: 125px;
-    height: 20px;
+    margin: 0 20px;
+
+    height: 20px;    
 }
 
 nav a{
@@ -93,9 +93,26 @@ nav a:hover{
     width: 50%;
 }
 
-.imagenAboutMe{
-    width: 40%;
+
+/* Skills */
+.skills{
+    padding: 2rem;
+    background: #dae6f2;
+    text-align: center;
 }
+
+.contenidoSkills{
+    align-items: center;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.imgSkill{
+    height: 10rem;
+    margin: 2rem;
+}
+
 
 /* Portfolio */
 .portfolio{
@@ -158,6 +175,7 @@ nav a:hover{
     text-decoration: none;
     color: #d6e1e7;
 }
+
 
 /* Contact */
 
@@ -226,4 +244,12 @@ footer{
     filter: invert(1);
     padding: 15px;
     height: 70px;
+}
+
+@media screen and (min-width: 0px) {
+    
+}
+
+@media screen and (min-width: 780px) {
+    
 }
