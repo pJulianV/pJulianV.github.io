@@ -27,7 +27,8 @@ header{
     height: 70px;
     background-color:#ECF9FF;
     color: #222831;
-    /* position: fixed; */
+    position: fixed;
+    z-index: 10;
 }
 
 .logojv{
