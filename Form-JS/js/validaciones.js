@@ -1,4 +1,5 @@
 export function valida(input) {
+  // data-tipo="tipoDeInput" ~ dataset.tipo
   const tipoDeInput = input.dataset.tipo;
   if (validadores[tipoDeInput]) {
     validadores[tipoDeInput](input);
@@ -38,6 +39,22 @@ const mensajesDeError = {
     valueMissing: "Este campo no puede estar vacío",
     customError: "Debes tener al menos 18 años de edad",
   },
+  numero: {
+    valueMissing: "Este campo no puede estar vacío",
+    patternMismatch: "El formato requerido es xxxxxxxxxx"
+  },
+  direccion :{
+    valueMissing: "Este campo no puede estar vacío",
+    patternMismatch: "La direccion debe estar entre 10 y 50 caracteres"
+  },
+  ciudad :{
+    valueMissing: "Este campo no puede estar vacío",
+    patternMismatch: "La ciudad debe estar entre 5 y 50 caracteres"
+  },
+  estado :{
+    valueMissing: "Este campo no puede estar vacío",
+    patternMismatch: "El estado debe estar entre 5 y 50 caracteres"
+  }
 };
 
 const validadores = {
