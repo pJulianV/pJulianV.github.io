@@ -34,6 +34,7 @@ header{
 .logojv{
     height: 100%;
     padding: 20px;
+    position: absolute;
 }
 
 nav {
@@ -62,6 +63,7 @@ nav li{
 .topnav {
   overflow: hidden;
   margin: .70rem 0;
+  height: 3rem;
 }
 
 .topnav li{
@@ -88,6 +90,7 @@ nav li{
   display: none;
   margin-right: 1rem;
   margin-top: .3rem;
+  height: auto;
 }
 
 @media screen and (max-width: 780px) {
@@ -100,17 +103,34 @@ nav li{
 }
 
 @media screen and (max-width: 780px) {
-  .topnav.responsive {position: relative;}
-  .topnav.responsive .iconMenu {
+    
+  .topnav {
+    position: relative;
+    width: 13rem;
+    height: 15rem;
+    }
+  .iconMenu {
     position: absolute;
     right: 0;
     top: 0;
+    height: 2;
   }
   .topnav.responsive a {
     float: none;
-    display: block;
+    display: flex;
     text-align: left;
+    flex-direction: column;
+    
   }
+  .topnav.responsive a:not(.iconMenu) {
+    margin: 10px 0 ;
+    background-color: #ECF9FF;
+    border-radius: 0;
+    width: 100px;
+    }
+  .topnav.responsive a:not(.iconMenu):hover {
+        background-color: #0e3147;
+    }
 
 }
 
@@ -170,7 +190,7 @@ nav li{
 }
 .contenidoAboutMe{
     padding: 4rem;
-    margin:  20px;
+    margin: 20px 7%;
     width: 50%;
     text-align: center;
 }
