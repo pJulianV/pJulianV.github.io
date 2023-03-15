@@ -15,4 +15,13 @@ function menuResponsive() {
   } else {
     x.className = "topnav";
   }
+  
 }
+
+const menu = document.getElementById("myTopnav");
+// Quitar menu con addEventListener "blur"
+menu.addEventListener("blur", (menu) =>{
+  menu.preventDefault();
+  menu.className === "topnav"
+  console.log("Blur?")
+})
