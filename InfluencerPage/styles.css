@@ -26,7 +26,7 @@ header{
     width: 100%;
     height: 70px;
     background-color:#ECF9FF;
-    color: #222831;
+    color: #282231;
     position: fixed;
     z-index: 10;
 }
@@ -38,8 +38,9 @@ header{
 }
 
 nav {
-    float: right;
-    
+    display: flex;
+  	justify-content: center;
+  	align-items: center;
 }
 
 .navList{
@@ -73,17 +74,16 @@ nav li{
 .topnav a {
   text-align: center;
   color: #110424;
-  border-radius: 20px;
   text-decoration: none;
-  color: #222831;
   padding: 10px 12px;
   transition: 0.5s all;
   font-weight: 600;
+  transition: all .5s ;
+  border-bottom: 3px solid #ECF9FF;
 }
 
 .topnav a:hover{
-    background-color: #2b0e47;
-    color: #d6e1e7;
+    border-bottom: 3px solid #110424;
 }
 
 .topnav .iconMenu {
@@ -178,6 +178,27 @@ nav li{
     }
 }
 
+/* fotos */
+.fotos{
+    padding: 1rem;
+    background: #dedede;
+    text-align: center;
+}
+
+.contenidoFotos{
+    align-items: center;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.imgFotos{
+    height: 15rem;
+    margin: 1rem;
+    transition: all 0.5s;
+}
+
+
 /* Contactame */
 
 .contact{
@@ -223,17 +244,20 @@ form label {
     justify-content: center;
     margin: 30px auto;
     padding: 10px;
-    width: 60%;
-    border-radius: 1rem;
+    height: 2.5rem;
+    width: 50%;
+    border-radius: .25rem;
     border: none;
     color: #d6e1e7;
-    background-color: #1f0052;
+    background-color: #2f006c;
     transition: 0.3s all;
+    font-size: 1rem;
 }
 
 .enviar:hover{
-    background-color: #370097;
-    width: 61%;
+    background-color: #420e87;
+    width: 51%;
+    height: 2.6rem;
 }
 
 .enviar:active{
@@ -252,11 +276,6 @@ form label {
     }
 }
 
-.linkFigma{
-    text-decoration: none;
-    color: #282231;
-    margin: 0 0 0 20px;
-}
 
 /* Footer */
 
@@ -264,11 +283,13 @@ form label {
 footer{
     width: 100%;
     background-color: #2f006c;
-    justify-content: space-between;
-    align-items: center;
     display: flex;
+  	justify-content: center;
+  	align-items: center;
     padding: .5rem 1rem;
 }
+
+
 
 .icon{
     filter: invert(1);
