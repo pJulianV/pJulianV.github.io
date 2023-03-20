@@ -4,28 +4,80 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Hola Soy Carolina</title>
+    <title>Portfolio - Julian Vargas</title>
+
+    <link rel="stylesheet" href="styles.css">
+
+    <link rel="shortcut icon" href="img/icons8-gunter-16.png">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inconsolata:wght@200&family=Open+Sans:wght@300;400;700&family=Poppins:wght@300&family=Raleway:wght@300&display=swap"   rel="stylesheet">
+
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
+
+
+<script src="script.js"></script>
+
 <body>
     <header>
         <nav>
-            <ul>
-                <li>Home</li>
-                <li>About Me</li>
-                <li>Contact Me</li>
-            </ul>
+            <!-- <div class="topnav" id="myTopnav"> -->
+                <ul class="topnav" id="myTopnav">
+
+                    <li>
+                        <a href="#contact">Contactame</a>
+                    </li>
+                    <li>
+                        <a href="javascript:void(0);" class="iconMenu" onclick="menuResponsive()">
+                            <i class="fa fa-bars"></i>
+                        </a>
+                    </li>
+                </ul>
+            <!-- </div> -->
         </nav>
     </header>
     <main>
-        <h1>Hola Soy Carolina</h1>
+        <section id="home" class="home">
+            <h1 class="tituloPresentacion">Soy Carolina, Tu Influecer de Confianza</h1>
+            <div class="contenidoHome">
+                
+            </div>
+        </section>
+        <section id="contact" class="contact">
+            <h2 class="tituloPrincipal">Contactame</h2>
+            
+            <form name="formularioContacto" action="https://formsubmit.co/julianvargastrb@gmail.com" method="POST" netlify>
+                <label for="nombre">Tu Nombre</label>
+                <input class="inputContacto" type="text" name="text" id="nombre" required>
+
+                <label for="correo">Tu Email</label>
+                <input class="inputContacto" type="email" name="email" id="correo" placeholder="email@domain.com" required>
+                
+                <label for="mensaje">Y Escribeme ;D</label>
+                <textarea class="inputContacto" name="mensaje" id="mensaje" cols="30" rows="10" required></textarea>
+
+                <input id="enviarCorreo" type="submit" value="¡Enviar!" class="enviar">
+            </form>
+            
+        </section>
 
     </main>
-    <section class="redes-sociales">
-        <ul>
-            <li>TikTok</li>
-            <li>Youtube</li>
-            <li>Instagram</li>
-        </ul>
-    </section>
 </body>
+<footer>
+    <div class="icons">
+        <!-- <a rel="noopener" target="_blank" href="https://instagram.com">
+            <i class="fa fa-instagram icon"></i>
+        </a>
+        <a rel="noopener" target="_blank" href="https://youtube.com">
+            <i class="fa fa-youtube icon"></i>
+        </a> -->
+        <a rel="noopener" target="_blank" href="https://www.tiktok.com">
+            <i class="fa fa-tiktok icon"></i>
+        </a>
+
+    </div>
+</footer>
 </html>
