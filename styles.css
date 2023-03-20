@@ -249,6 +249,11 @@ nav li{
 .imgSkill{
     height: 10rem;
     margin: 2rem;
+    transition: all 0.5s;
+}
+.imgSkill:hover{
+    height: 10.5rem;
+    margin: 2rem;
 }
 
 
