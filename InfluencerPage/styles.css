@@ -38,9 +38,10 @@ header{
 }
 
 nav {
-    display: flex;
+    float: right;
+    /* display: flex;
   	justify-content: center;
-  	align-items: center;
+  	align-items: center; */
 }
 
 .navList{
@@ -130,6 +131,7 @@ nav li{
     }
   .topnav.responsive a:not(.iconMenu):hover {
         background-color: #290e47;
+        color: #ECF9FF;
     }
 
 }
@@ -155,9 +157,11 @@ nav li{
 } */
 
 .tituloPresentacion{
-    position: absolute;
-    top: 35%;
-    right: 5%;
+            position: absolute;
+        right: 0;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
     font-size: 50px;
     font-weight: 900;
     margin: 0 0 0 0;
@@ -174,7 +178,7 @@ nav li{
         left: 50%;
         top: 50%;
         transform: translate(-50%, -50%);
-        font-size: 2.75rem;
+        font-size: 2.5rem;
     }
 }
 
