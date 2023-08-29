@@ -175,17 +175,14 @@
         <section id="contact" class="contact">
             <h2 class="tituloPrincipal">Contact</h2>
             
-            <form name="formularioContacto" action="https://formsubmit.co/julianvargastrb@gmail.com" method="POST" netlify>
-                <label for="nombre">Name</label>
-                <input class="inputContacto" type="text" name="text" id="nombre" required>
+            <form id="contactform" action="https://formsubmit.io/send/julianvargastrb@gmail.com" method="POST">
+                <input name="name" type="text" id="name">
+                <input name="email" type="email" id="email">
+                <textarea name="comment" id="comment" rows="3"></textarea>
 
-                <label for="correo">Email</label>
-                <input class="inputContacto" type="email" name="email" id="correo" placeholder="email@domain.com" required>
-                
-                <label for="mensaje">Message</label>
-                <textarea class="inputContacto" name="mensaje" id="mensaje" cols="30" rows="10" required></textarea>
+                <input name="_formsubmit_id" type="text" style="display:none">
 
-                <input id="enviarCorreo" type="submit" value="Submit" class="enviar">
+                <input value="Submit" type="submit">
             </form>
             
         </section>
