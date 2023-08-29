@@ -39,7 +39,7 @@
                         <a href="#skills">Skills</a>
                     </li>
                     <li>
-                        <a href="#contact">Contact</a>
+                        <a href="#contact">investment funds</a>
                     </li>
                     <li>
                         <a href="javascript:void(0);" class="iconMenu" onclick="menuResponsive()">
@@ -175,14 +175,22 @@
         <section id="contact" class="contact">
             <h2 class="tituloPrincipal">Contact</h2>
             
-            <form id="contactform" action="https://formsubmit.io/send/julianvargastrb@gmail.com" method="POST">
-                <input name="name" type="text" id="name">
-                <input name="email" type="email" id="email">
-                <textarea name="comment" id="comment" rows="3"></textarea>
+
+
+            <form name="formularioContacto" action="https://formsubmit.io/send/julianvargastrb@gmail.com" method="POST">
+
+                <label for="nombre">Name</label>
+                <input class="inputContacto" name="name" type="text" id="name" required>
+                
+                <label for="correo">Email</label>
+                <input class="inputContacto" name="email" type="email" id="email" placeholder="email@domain.com" required>
+
+                <label for="mensaje">Message</label>
+                <textarea class="inputContacto" name="comment" id="comment" rows="3" cols="30" rows="10" required></textarea>
 
                 <input name="_formsubmit_id" type="text" style="display:none">
 
-                <input value="Submit" type="submit">
+                <input id="enviarCorreo" class="enviar" value="Submit" type="submit">
             </form>
             
         </section>
