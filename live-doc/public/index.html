@@ -497,27 +497,28 @@
 
             <div class="col-lg-6 z-index-2 mb-5"><img class="w-100" src="assets/img/gallery/appointment.png" alt="..." /></div>
             <div class="col-lg-6 z-index-2">
-              <form class="row g-3">
+              <form class="row g-3" action="/save-form" method="post">
+                <!-- Campos del formulario -->
                 <div class="col-md-6">
                   <label class="visually-hidden" for="inputName">Nombre</label>
-                  <input class="form-control form-livedoc-control" id="inputName" type="text" placeholder="Name" />
+                  <input class="form-control form-livedoc-control" id="inputName" type="text" name="name" placeholder="Name" />
                 </div>
                 <div class="col-md-6">
                   <label class="visually-hidden" for="inputPhone">Phone</label>
-                  <input class="form-control form-livedoc-control" id="inputPhone" type="text" placeholder="Phone" />
+                  <input class="form-control form-livedoc-control" id="inputPhone" type="text" name="phone" placeholder="Phone" />
+                </div>
+                <div class="col-md-6">
+                  <label class="form-label visually-hidden" for="inputEmail">Email</label>
+                  <input class="form-control form-livedoc-control" id="inputEmail" type="email" name="email" placeholder="Email" />
                 </div>
                 <div class="col-md-6">
                   <label class="form-label visually-hidden" for="inputCategory">Categoria</label>
-                  <select class="form-select" id="inputCategory">
+                  <select class="form-select" id="inputCategory" name="category">
                     <option selected="selected">Categoria</option>
                     <option> Categoria Uno</option>
                     <option> Categoria Dos</option>
                     <option> Categoria Tres</option>
                   </select>
-                </div>
-                <div class="col-md-6">
-                  <label class="form-label visually-hidden" for="inputEmail">Email</label>
-                  <input class="form-control form-livedoc-control" id="inputEmail" type="email" placeholder="Email" />
                 </div>
                 <div class="col-md-12">
                   <label class="form-label visually-hidden" for="validationTextarea">Mensaje</label>

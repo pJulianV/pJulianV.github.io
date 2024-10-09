@@ -14,7 +14,7 @@
     "deploy:debug": "NODE_DEBUG=gh-pages npm run deploy"
   },
   "keywords": [],
-  "author": "",
+  "author": "Julian",
   "license": "ISC",
   "devDependencies": {
     "@babel/core": "^7.10.4",
@@ -61,5 +61,9 @@
   },
   "browserslist": [
     "last 5 version"
-  ]
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/pJulianV/pJulianV.github.io/blob/main/live-doc"
+  }
 }
