@@ -849,10 +849,10 @@ readers do not read off random characters that represent icons */
 .fa-chair:before {
   content: "\f6c0"; }
 
-.fa-chalkboard:before {
+.fa-chalktabla:before {
   content: "\f51b"; }
 
-.fa-chalkboard-teacher:before {
+.fa-chalktabla-teacher:before {
   content: "\f51c"; }
 
 .fa-charging-station:before {
@@ -891,7 +891,7 @@ readers do not read off random characters that represent icons */
 .fa-chess-bishop:before {
   content: "\f43a"; }
 
-.fa-chess-board:before {
+.fa-chess-tabla:before {
   content: "\f43c"; }
 
 .fa-chess-king:before {
@@ -957,13 +957,13 @@ readers do not read off random characters that represent icons */
 .fa-clinic-medical:before {
   content: "\f7f2"; }
 
-.fa-clipboard:before {
+.fa-cliptabla:before {
   content: "\f328"; }
 
-.fa-clipboard-check:before {
+.fa-cliptabla-check:before {
   content: "\f46c"; }
 
-.fa-clipboard-list:before {
+.fa-cliptabla-list:before {
   content: "\f46d"; }
 
 .fa-clock:before {
@@ -1701,7 +1701,7 @@ readers do not read off random characters that represent icons */
 .fa-flickr:before {
   content: "\f16e"; }
 
-.fa-flipboard:before {
+.fa-fliptabla:before {
   content: "\f44d"; }
 
 .fa-flushed:before {
@@ -2394,7 +2394,7 @@ readers do not read off random characters that represent icons */
 .fa-keybase:before {
   content: "\f4f5"; }
 
-.fa-keyboard:before {
+.fa-keytabla:before {
   content: "\f11c"; }
 
 .fa-keycdn:before {
@@ -3591,7 +3591,7 @@ readers do not read off random characters that represent icons */
 .fa-snapchat-square:before {
   content: "\f2ad"; }
 
-.fa-snowboarding:before {
+.fa-snowtablaing:before {
   content: "\f7ce"; }
 
 .fa-snowflake:before {
