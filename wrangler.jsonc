@@ -1,7 +1,8 @@
+// filepath: /home/julian/Documents/Workspace/pJulianV.github.io/wrangler.jsonc
 {
   "name": "pjulianv-github-io",
   "compatibility_date": "2025-07-17",
   "assets": {
-    "directory": "./dist"
+    "directory": "img"
   }
 }
