@@ -1,8 +1,18 @@
 // filepath: /home/julian/Documents/Workspace/pJulianV.github.io/wrangler.jsonc
 {
-  "name": "pjulianv-github-io",
+  "name": "portfolio",
   "compatibility_date": "2025-07-17",
   "assets": {
-    "directory": "img"
+    "directory": "."
+  },
+  "routes": [
+    {
+      "pattern": "julianvargasdev.com/*",
+      "zone_id": "your_zone_id"
+    }
+  ],
+  "site": {
+    "bucket": ".",
+    "entry-point": "index.html"
   }
 }
