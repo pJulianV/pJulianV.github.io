@@ -1,7 +1,7 @@
-// filepath: /home/julian/Documents/Workspace/pJulianV.github.io/wrangler.jsonc
 {
   "name": "portfolio",
   "compatibility_date": "2025-07-17",
+  "main": "index.html",
   "assets": {
     "directory": "."
   },
@@ -12,7 +12,6 @@
     }
   ],
   "site": {
-    "bucket": ".",
-    "entry-point": "index.html"
+    "bucket": "."
   }
 }
