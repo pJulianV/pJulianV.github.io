@@ -1,21 +1,29 @@
-/* Estilo Similar a un Periodico */
 body {
-    background-color: #FDEEDC;
-    font-family: 'Inconsolata', monospace;
-    font-family: 'Open Sans', sans-serif;
-    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
     font-family: 'Raleway', sans-serif;
+    min-height: 100vh;
+    margin: 0;
+    padding: 0;
 }
 button{
-    border-radius: 15px;
-    width: 250px;
-    height: 45px;
-    transition: 1s all ;
+    border-radius: 25px;
+    width: 200px;
+    height: 50px;
+    transition: 0.3s all;
     cursor: pointer;
+    font-weight: 600;
+    font-size: 1rem;
+    border: none;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.2);
 }
 
 button:hover{
-    transform: scale(1.05) rotate(1deg) ;    
+    transform: translateY(-3px);
+    box-shadow: 0 6px 20px rgba(0,0,0,0.3);
+}
+
+button:active{
+    transform: translateY(-1px);
 }
 
 header{
@@ -37,26 +45,46 @@ textarea{
     resize: none;
 }
 #textarea{
-    background-color: rgb(248, 248, 248);
-    width: 520px;
+    background-color: white;
+    width: 100%;
+    max-width: 520px;
     height: 270px;
-    padding: 20px;
-    border-radius: 20px;
+    padding: 25px;
+    border-radius: 15px;
     cursor: text;
-    color: transparent;
-    text-shadow: 0 0 0 #000000;
+    color: #2d3748;
+    font-size: 18px;
+    border: 2px solid #e0e0e0;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    transition: 0.3s all;
 }
 
+#textarea:focus{
+    border-color: #667eea;
+    box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.1);
+    outline: none;
+}
 
 #texto {
-    width: 520px;
+    width: 100%;
+    max-width: 520px;
     height: 270px;
-    padding: 20px;
-    background-color: #FDEEDC;
-    cursor: pointer;
-    color: #E38B29;
-    font-size: 20px;
-    font-weight: 600;
+    padding: 25px;
+    background-color: white;
+    cursor: text;
+    color: #2d3748;
+    font-size: 18px;
+    font-weight: 500;
+    border-radius: 15px;
+    border: 2px solid #e0e0e0;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    transition: 0.3s all;
+}
+
+#texto:focus{
+    border-color: #667eea;
+    box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.1);
+    outline: none;
 }
 
 ::placeholder{
@@ -65,9 +93,18 @@ textarea{
 
 .grid{
     display: grid;
-    grid-template-columns: 50% 50%;
+    grid-template-columns: 1fr 1fr;
+    gap: 30px;
     padding: 50px;
-    
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+@media (max-width: 768px) {
+    .grid {
+        grid-template-columns: 1fr;
+        padding: 20px;
+    }
 }
 
 
@@ -84,23 +121,43 @@ textarea{
 }
 .botonEncriptar {
     border: none;
-    background-color: #E38B29;
-    color: rgb(228, 234, 253);
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
 }
 
 
 .botonDesencriptar{
-    color: #E38B29;
-    margin-left: 10px;
-    border: #E38B29 solid 1px;
+    color: #667eea;
+    margin-left: 15px;
+    border: 2px solid #667eea;
+    background: white;
+}
+
+.botonDesencriptar:hover{
+    background: #667eea;
+    color: white;
 }
 
 #copyBlock{
-    color: #E38B29;
+    color: #667eea;
     position: absolute;
-    top: 370px;
-    right: 190px;
-    border: #E38B29 solid 1px;
+    top: 300px;
+    right: 20px;
+    border: 2px solid #667eea;
+    background: white;
+    padding: 10px 25px;
+    width: auto;
+}
+
+#copyBlock:hover{
+    background: #667eea;
+    color: white;
+}
+
+#copyAnswer{
+    color: #10b981;
+    font-weight: 600;
+    margin-left: 10px;
 }
 
 .div_hide {

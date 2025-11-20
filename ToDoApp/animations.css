@@ -1,0 +1,47 @@
+/* Additional styles for improved functionality */
+@keyframes slideOut {
+  to {
+    opacity: 0;
+    transform: translateX(-100%);
+  }
+}
+
+.card.completed {
+  background: #f0f4f8;
+}
+
+.task {
+  cursor: pointer;
+  user-select: none;
+}
+
+.task[contenteditable="true"] {
+  background: #fff9e6;
+  padding: 2px 5px;
+  border-radius: 4px;
+}
+
+/* Toast notification for copy feedback */
+.toast {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  padding: 15px 25px;
+  border-radius: 10px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+  animation: slideInToast 0.3s ease;
+  z-index: 1000;
+}
+
+@keyframes slideInToast {
+  from {
+    opacity: 0;
+    transform: translateX(100px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
