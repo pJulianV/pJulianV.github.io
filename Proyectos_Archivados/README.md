@@ -43,14 +43,26 @@ Esta carpeta contiene proyectos antiguos del portfolio que han sido archivados p
 
 ---
 
+### 7. **Proyecto Encriptador** (Text Encryptor)
+- **Tecnologías**: JavaScript ES6+, Cryptography Algorithms
+- **Descripción**: Aplicación de encriptación de texto
+- **Fecha de archivo**: Noviembre 2025
+- **Razón**: Funcionalidad básica, reemplazado por proyectos más avanzados
+
+### 8. **Form-JS** (Pet Shop Registration Form)
+- **Tecnologías**: JavaScript, Form Validation, RegEx
+- **Descripción**: Formulario de registro para tienda de mascotas
+- **Fecha de archivo**: Noviembre 2025
+- **Razón**: Proyecto de práctica de validación de formularios, funcionalidad básica
+
+---
+
 ## Proyectos Activos Actuales:
 
 Los proyectos activos en el portfolio incluyen:
 
 1. **Bancolombia - Collective Investment Funds App** (Python, Streamlit)
 2. **Modern ToDo App** (JavaScript ES6+, LocalStorage, Glassmorphism)
-3. **Text Encryptor** (JavaScript ES6+, Cryptography)
-4. **Pet Shop Registration Form** (JavaScript, Form Validation)
 
 ---
 
