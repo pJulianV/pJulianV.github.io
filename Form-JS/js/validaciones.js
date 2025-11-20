@@ -24,36 +24,36 @@ const tipoDeErrores = [
 
 const mensajesDeError = {
   nombre: {
-    valueMissing: "El campo nombre no puede estar vacío",
+    valueMissing: "Por favor, ingresa tu nombre",
   },
   email: {
-    valueMissing: "El campo correo no puede estar vacío",
-    typeMismatch: "El correo no es válido",
+    valueMissing: "Por favor, ingresa tu correo electrónico",
+    typeMismatch: "Por favor, ingresa un correo válido (ejemplo@dominio.com)",
   },
   password: {
-    valueMissing: "El campo contraseña no puede estar vacío",
+    valueMissing: "Por favor, crea una contraseña",
     patternMismatch:
-      "Al menos 6 caracteres, máximo 12, debe contener una letra minúscula, una letra mayúscula, un número y no puede contener caracteres especiales.",
+      "La contraseña debe tener entre 6-12 caracteres, incluir mayúsculas, minúsculas y números. No se permiten caracteres especiales.",
   },
   nacimiento: {
-    valueMissing: "Este campo no puede estar vacío",
-    customError: "Debes tener al menos 18 años de edad",
+    valueMissing: "Por favor, ingresa tu fecha de nacimiento",
+    customError: "Debes ser mayor de 18 años para registrarte",
   },
   numero: {
-    valueMissing: "Este campo no puede estar vacío",
-    patternMismatch: "El formato requerido es xxxxxxxxxx"
+    valueMissing: "Por favor, ingresa tu número de teléfono",
+    patternMismatch: "Por favor, ingresa un número válido de 10 dígitos"
   },
   direccion :{
-    valueMissing: "Este campo no puede estar vacío",
-    patternMismatch: "La direccion debe estar entre 10 y 50 caracteres"
+    valueMissing: "Por favor, ingresa tu dirección completa",
+    patternMismatch: "La dirección debe tener entre 10 y 40 caracteres"
   },
   ciudad :{
-    valueMissing: "Este campo no puede estar vacío",
-    patternMismatch: "La ciudad debe estar entre 5 y 50 caracteres"
+    valueMissing: "Por favor, ingresa tu ciudad",
+    patternMismatch: "El nombre de la ciudad debe tener entre 5 y 40 caracteres"
   },
   estado :{
-    valueMissing: "Este campo no puede estar vacío",
-    patternMismatch: "El estado debe estar entre 5 y 50 caracteres"
+    valueMissing: "Por favor, ingresa tu estado",
+    patternMismatch: "El nombre del estado debe tener entre 5 y 40 caracteres"
   }
 };
 

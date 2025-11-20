@@ -1,32 +1,61 @@
+// Encryption mapping
+const encryptionMap = {
+    'e': 'enter',
+    'i': 'imes',
+    'a': 'ai',
+    'o': 'ober',
+    'u': 'ufat'
+};
 
+const decryptionMap = {
+    'enter': 'e',
+    'imes': 'i',
+    'ai': 'a',
+    'ober': 'o',
+    'ufat': 'u'
+};
 
-function encriptar(){
-    var arrNewString = (document.getElementById("texto").value).split("");
-    for (var i = 0; i < arrNewString.length; i++){
-        arrNewString[i] = arrNewString[i].replace("e","enter");
-        arrNewString[i] = arrNewString[i].replace("i","imes");
-        arrNewString[i] = arrNewString[i].replace("o","ober");
-        arrNewString[i] = arrNewString[i].replace("a","ai");
-        arrNewString[i] = arrNewString[i].replace("u","ufat");
-    }
-    var newString = ""
-    for (i = 0; i < arrNewString.length; i++){
-        newString += arrNewString[i];
-    }
-    document.getElementById("textarea").innerHTML = newString;
+function validateInput(text) {
+    // Check for lowercase only and no accents
+    const regex = /^[a-z\s]*$/;
+    return regex.test(text);
 }
 
-// Es mejor separar cada letra en una lista y tratar cada una de ellas en una funcion
-function desencriptar(){
-    var newString = document.getElementById("texto").value;
-    var arrNewString = newString.split("");
-    for (var i = 0; i < arrNewString.length; i++){
-        newString = newString.replace("ai","a");
-        newString = newString.replace("enter","e");
-        newString = newString.replace("imes","i");
-        newString = newString.replace("ober","o");
-        newString = newString.replace("ufat","u");
+function encriptar() {
+    const inputText = document.getElementById("texto").value.trim();
+    
+    if (!inputText) {
+        alert("Por favor ingresa un texto");
+        return;
     }
-    document.getElementById("textarea").innerHTML = newString;
+    
+    if (!validateInput(inputText)) {
+        alert("Solo se permiten letras minúsculas sin acentos");
+        return;
+    }
+    
+    let encryptedText = inputText;
+    for (let [key, value] of Object.entries(encryptionMap)) {
+        encryptedText = encryptedText.replaceAll(key, value);
+    }
+    
+    document.getElementById("textarea").value = encryptedText;
+}
+
+function desencriptar() {
+    const inputText = document.getElementById("texto").value.trim();
+    
+    if (!inputText) {
+        alert("Por favor ingresa un texto");
+        return;
+    }
+    
+    let decryptedText = inputText;
+    // Decrypt in reverse order (longer patterns first to avoid partial replacements)
+    for (let [key, value] of Object.entries(decryptionMap)) {
+        decryptedText = decryptedText.replaceAll(key, value);
+    }
+    
+    document.getElementById("textarea").value = decryptedText;
 }
 

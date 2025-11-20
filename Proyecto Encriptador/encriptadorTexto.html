@@ -6,8 +6,8 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Encriptador de texto con algoritmo personalizado - convierte mensajes a código secreto">
     <title>Encriptador</title>
-    <script src="script.js"></script>
     <link rel="stylesheet" href="encriptador.css">
     
     <link rel="shortcut icon" href="img/icons8-bookmark-documents-16.png">
@@ -36,18 +36,38 @@
             <button id="copyBlock">Copiar</button> <span id="copyAnswer"></span>
         </section>
     </div>
+    
+    <script src="script.js"></script>
+    <script>
+        // Copy to clipboard functionality
+        const textarea = document.getElementById("textarea");
+        const copyBtn = document.getElementById("copyBlock");
+        const answer = document.getElementById("copyAnswer");
+        
+        if (copyBtn) {
+            copyBtn.addEventListener('click', function() {
+                if (textarea.value) {
+                    textarea.select();
+                    navigator.clipboard.writeText(textarea.value)
+                        .then(() => {
+                            if (answer) {
+                                answer.textContent = "✓ Copiado";
+                                setTimeout(() => answer.textContent = "", 2000);
+                            }
+                        })
+                        .catch(() => {
+                            // Fallback for older browsers
+                            document.execCommand('copy');
+                            if (answer) {
+                                answer.textContent = "✓ Copiado";
+                                setTimeout(() => answer.textContent = "", 2000);
+                            }
+                        });
+                }
+            });
+        }
+    </script>
 </body>
-  <script language="JavaScript">
-    // Establecemos las variables
-    var textarea = document.getElementById("textarea");
-    var answer = document.getElementById("copyAnswer");
-    var copy   = document.getElementById("copyBlock");
-    copy.addEventListener('click', function(e) {
-       // Sleccionando el texto
-       textarea.select(); 
-       var successful = document.execCommand('copy');
-    });
-  </script>
 </html>
 
 <!-- https://trello.com/b/WTdfcewC/encriptador-de-texto-alura-challenges-one -->
