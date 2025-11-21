@@ -187,8 +187,10 @@ nav li{
     background-attachment: fixed;
     position: relative;
     display: flex;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
+    gap: 1.5rem;
 }
 
 
@@ -202,7 +204,7 @@ nav li{
 } */
 
 .tituloPresentacion{
-    font-size: 4rem;
+    font-size: 3.5rem;
     font-weight: 900;
     margin: 0;
     color: white;
@@ -210,6 +212,52 @@ nav li{
     text-shadow: 2px 4px 8px rgba(0,0,0,0.3);
     animation: fadeInUp 1s ease;
     line-height: 1.2;
+}
+
+.subtitulo {
+    font-size: 1.5rem;
+    font-weight: 300;
+    color: rgba(255, 255, 255, 0.9);
+    text-align: center;
+    margin: 0;
+    animation: fadeInUp 1s ease 0.2s backwards;
+}
+
+.contenidoHome {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.5rem;
+    max-width: 700px;
+    padding: 0 20px;
+}
+
+.hero-description {
+    font-size: 1.2rem;
+    color: rgba(255, 255, 255, 0.85);
+    text-align: center;
+    margin: 0;
+    animation: fadeInUp 1s ease 0.4s backwards;
+    line-height: 1.6;
+}
+
+.cta-button {
+    display: inline-block;
+    padding: 15px 40px;
+    background: linear-gradient(135deg, var(--color-gradient-start), var(--color-gradient-end));
+    color: white;
+    text-decoration: none;
+    border-radius: var(--border-radius);
+    font-weight: 600;
+    font-size: 1.1rem;
+    transition: var(--transition-base);
+    box-shadow: var(--shadow-lg);
+    animation: fadeInUp 1s ease 0.6s backwards;
+}
+
+.cta-button:hover {
+    transform: translateY(-3px);
+    box-shadow: var(--shadow-xl);
 }
 
 @keyframes fadeInUp {
@@ -225,12 +273,20 @@ nav li{
 
 @media screen and (max-width: 780px){
     .tituloPresentacion{
-        position: absolute;
-        right: 0;
-        left: 50%;
-        top: 50%;
-        transform: translate(-50%, -50%);
-        font-size: 2.75rem;
+        font-size: 2.5rem;
+    }
+    
+    .subtitulo {
+        font-size: 1.2rem;
+    }
+    
+    .hero-description {
+        font-size: 1rem;
+    }
+    
+    .cta-button {
+        padding: 12px 30px;
+        font-size: 1rem;
     }
 }
 
@@ -241,9 +297,54 @@ nav li{
     align-items: center;
 }
 
+.project-subtitle {
+    font-size: 0.9rem;
+    color: var(--color-gradient-start);
+    font-weight: 600;
+    margin: 0 0 10px 0;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.project-description {
+    font-size: 0.95rem;
+    line-height: 1.6;
+    margin: 12px 0;
+    color: #666;
+}
+
+.project-tech {
+    font-size: 0.9rem;
+    margin: 12px 0;
+    color: #555;
+}
+
+.project-link {
+    display: inline-block;
+    margin-top: 10px;
+    color: var(--color-gradient-start);
+    text-decoration: none;
+    font-weight: 600;
+    transition: var(--transition-base);
+}
+
+.project-link:hover {
+    color: var(--color-gradient-end);
+    transform: translateX(5px);
+}
+
+.contact-intro {
+    text-align: center;
+    font-size: 1.1rem;
+    color: #666;
+    margin: -10px auto 30px;
+    max-width: 600px;
+}
+
 .descripcionAboutMe{
     margin: 20px 0 ;
     font-size: 18px;
+    line-height: 1.8;
 }
 .contenidoAboutMe{
     padding: 4rem;
