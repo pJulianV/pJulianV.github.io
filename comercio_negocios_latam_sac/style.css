@@ -92,6 +92,7 @@ nav a:hover {
   font-weight: 700;
   line-height: 1.2;
   text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+  animation: slideInUp 1s ease-out 0.3s both;
 }
 
 .hero-subtitle {
@@ -100,6 +101,7 @@ nav a:hover {
   color: #c19e5c;
   font-weight: 500;
   text-shadow: 1px 1px 3px rgba(0,0,0,0.3);
+  animation: slideInUp 1s ease-out 0.6s both;
 }
 
 .cta-button {
@@ -114,6 +116,7 @@ nav a:hover {
   transition: transform 0.3s, box-shadow 0.3s;
   box-shadow: 0 4px 10px rgba(0,0,0,0.3);
   letter-spacing: 0.5px;
+  animation: slideInUp 1s ease-out 0.9s both;
 }
 
 .cta-button:hover {
