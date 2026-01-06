@@ -1,0 +1,325 @@
+body {
+  font-family: 'Roboto', Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background: #EEF0ED;
+  color: #222;
+  line-height: 1.6;
+}
+
+/* Header & Navigation */
+header {
+  background: #002a6e;
+  color: #fff;
+  padding: 1rem 2rem;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.logo-container {
+  text-align: center;
+  padding: 1rem 0;
+}
+
+.logo {
+  max-width: 300px;
+  height: auto;
+}
+
+nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  flex-wrap: wrap;
+}
+
+nav li {
+  margin: 0;
+}
+
+nav a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.3s;
+  padding: 0.5rem 1rem;
+  display: block;
+}
+
+nav a:hover {
+  color: #c19e5c;
+  background: rgba(255,255,255,0.1);
+  border-radius: 5px;
+}
+
+/* Hero Section */
+.hero {
+  background: linear-gradient(135deg, #002a6e 0%, #001845 100%);
+  color: #fff;
+  padding: 4rem 2rem;
+  text-align: center;
+}
+
+.hero-content h1 {
+  font-size: 2.5rem;
+  margin: 0 0 1rem 0;
+  font-weight: 700;
+}
+
+.hero-subtitle {
+  font-size: 1.2rem;
+  margin-bottom: 2rem;
+  color: #c19e5c;
+}
+
+.cta-button {
+  display: inline-block;
+  background: #c19e5c;
+  color: #fff;
+  padding: 1rem 2.5rem;
+  text-decoration: none;
+  border-radius: 50px;
+  font-weight: 700;
+  transition: transform 0.3s, box-shadow 0.3s;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.2);
+}
+
+.cta-button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 12px rgba(0,0,0,0.3);
+  background: #a88549;
+}
+
+/* Main Content */
+main {
+  max-width: 1100px;
+  margin: 2rem auto;
+  padding: 0 1rem;
+}
+
+section {
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.07);
+  padding: 2.5rem;
+  margin-bottom: 2rem;
+}
+
+h2 {
+  color: #002a6e;
+  margin-top: 0;
+  font-size: 2rem;
+  margin-bottom: 1.5rem;
+}
+
+h3 {
+  color: #002a6e;
+  font-size: 1.3rem;
+  margin-bottom: 0.5rem;
+}
+
+/* Propuesta de Valor */
+.propuesta p {
+  font-size: 1.1rem;
+  line-height: 1.8;
+  color: #444;
+}
+
+/* Servicios Grid */
+.servicios-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1.5rem;
+  margin-top: 2rem;
+}
+
+.servicio-card {
+  background: #f9f9f7;
+  border: 2px solid #c19e5c;
+  border-radius: 8px;
+  padding: 1.5rem;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.servicio-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 4px 12px rgba(193,158,92,0.3);
+  border-color: #002a6e;
+}
+
+.servicio-card h3 {
+  color: #002a6e;
+  margin-top: 0;
+}
+
+.servicio-card p {
+  color: #555;
+  margin: 0;
+}
+
+/* Aliados Section */
+.aliados {
+  background: #f9f9f7;
+}
+
+.aliados-intro {
+  text-align: center;
+  font-size: 1.1rem;
+  color: #555;
+  margin-bottom: 2rem;
+}
+
+.aliados-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+.aliado-card {
+  background: #fff;
+  border: 2px solid #c19e5c;
+  border-radius: 10px;
+  padding: 2rem;
+  text-align: center;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.aliado-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 16px rgba(193,158,92,0.3);
+  border-color: #002a6e;
+}
+
+.aliado-icon {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+}
+
+.aliado-card h3 {
+  color: #002a6e;
+  margin-bottom: 1rem;
+}
+
+.aliado-card p {
+  color: #666;
+  margin-bottom: 1.5rem;
+}
+
+.aliado-link {
+  color: #c19e5c;
+  text-decoration: none;
+  font-weight: 600;
+  transition: color 0.3s;
+}
+
+.aliado-link:hover {
+  color: #002a6e;
+  text-decoration: underline;
+}
+
+/* Contacto Form */
+.contacto {
+  background: linear-gradient(135deg, #f9f9f7 0%, #fff 100%);
+}
+
+.contacto p {
+  text-align: center;
+  font-size: 1.1rem;
+  color: #555;
+  margin-bottom: 2rem;
+}
+
+.contacto-form {
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.form-group {
+  margin-bottom: 1.5rem;
+}
+
+.form-group label {
+  display: block;
+  color: #002a6e;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+}
+
+.form-group input,
+.form-group textarea {
+  width: 100%;
+  padding: 0.8rem;
+  border: 2px solid #c19e5c;
+  border-radius: 5px;
+  font-family: 'Roboto', Arial, sans-serif;
+  font-size: 1rem;
+  transition: border-color 0.3s;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+  outline: none;
+  border-color: #002a6e;
+}
+
+.submit-button {
+  width: 100%;
+  background: #c19e5c;
+  color: #fff;
+  padding: 1rem;
+  border: none;
+  border-radius: 5px;
+  font-size: 1.1rem;
+  font-weight: 700;
+  cursor: pointer;
+  transition: background 0.3s, transform 0.2s;
+}
+
+.submit-button:hover {
+  background: #002a6e;
+  transform: translateY(-2px);
+}
+
+/* Footer */
+footer {
+  text-align: center;
+  padding: 2rem 1rem;
+  background: #002a6e;
+  color: #EEF0ED;
+  font-size: 0.95rem;
+  margin-top: 3rem;
+  border-top: 3px solid #c19e5c;
+}
+
+.grupo-info {
+  margin-top: 0.5rem;
+  font-style: italic;
+  color: #c19e5c;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .hero-content h1 {
+    font-size: 1.8rem;
+  }
+  
+  nav ul {
+    gap: 1rem;
+  }
+  
+  section {
+    padding: 1.5rem;
+  }
+  
+  .servicios-grid,
+  .aliados-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .logo {
+    max-width: 200px;
+  }
+}

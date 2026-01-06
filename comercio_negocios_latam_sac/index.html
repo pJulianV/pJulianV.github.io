@@ -4,32 +4,119 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Comercio y Negocios Latam SAC</title>
+  <link rel="icon" type="image/jpeg" href="img/Icon.jpeg">
   <link href="https://fonts.googleapis.com/css?family=Roboto:400,700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
+  <!-- #00183E azul  #c19e5c dorado #EEF0ED blanco  -->
   <header>
-    <h1>Comercio y Negocios Latam SAC</h1>
-    <p class="slogan">“Desarrollamos oportunidades, impulsamos crecimiento.”<br><span class="sub">Una empresa del Grupo CASNU</span></p>
+    <div class="logo-container">
+      <img src="img/LogoMovAcorta.jpeg" alt="Comercio y Negocios Latam SAC Logo" class="logo">
+    </div>
+    <nav>
+      <ul>
+        <li><a href="#inicio">Inicio</a></li>
+        <li><a href="#servicios">Servicios</a></li>
+        <li><a href="#contacto">Contacto</a></li>
+      </ul>
+    </nav>
   </header>
+
+  <section id="inicio" class="hero">
+    <div class="hero-content">
+      <h1>Desarrollamos oportunidades, impulsamos crecimiento</h1>
+      <p class="hero-subtitle">Especializados en Business Development e Inteligencia Comercial</p>
+      <a href="#contacto" class="cta-button">Contáctanos</a>
+    </div>
+  </section>
+
   <main>
     <section class="propuesta">
       <h2>Propuesta de Valor</h2>
       <p>Especializados en desarrollar, acelerar y expandir negocios en mercados nacionales e internacionales, mediante inteligencia comercial, estrategias de expansión y gestión integral de proyectos.</p>
     </section>
-    <section class="core">
+
+    <section id="servicios" class="core">
       <h2>Core de la Marca</h2>
-      <ul>
-        <li>Desarrollo de negocios (Business Development)</li>
-        <li>Inteligencia comercial e investigación de mercados</li>
-        <li>Expansión internacional</li>
-        <li>Consultoría estratégica</li>
-        <li>Gestión de proyectos empresariales</li>
-      </ul>
+      <div class="servicios-grid">
+        <div class="servicio-card">
+          <img src="img/DesarrolloNeg.jpg" alt="Desarrollo de Negocios" class="servicio-img">
+          <h3>Desarrollo de Negocios</h3>
+          <p>Business Development estratégico para identificar y desarrollar oportunidades comerciales en mercados nacionales e internacionales.</p>
+        </div>
+        <div class="servicio-card">
+          <img src="img/InteligenciaComercial.jpg" alt="Inteligencia Comercial" class="servicio-img">
+          <h3>Inteligencia Comercial</h3>
+          <p>Investigación de mercados y análisis estratégico de datos para la toma de decisiones comerciales informadas.</p>
+        </div>
+        <div class="servicio-card">
+          <img src="img/ExpancionIntern.jpg" alt="Expansión Internacional" class="servicio-img">
+          <h3>Expansión Internacional</h3>
+          <p>Estrategias y planes de acción para expandir su negocio en mercados internacionales con alto potencial de crecimiento.</p>
+        </div>
+        <div class="servicio-card">
+          <img src="img/Consultoria.jpg" alt="Consultoría Estratégica" class="servicio-img">
+          <h3>Consultoría Estratégica</h3>
+          <p>Asesoramiento especializado en estrategias comerciales y de expansión para acelerar el crecimiento empresarial.</p>
+        </div>
+        <div class="servicio-card">
+          <img src="img/Gestion.jpg" alt="Gestión de Proyectos Empresariales" class="servicio-img">
+          <h3>Gestión de Proyectos Empresariales</h3>
+          <p>Administración y ejecución integral de proyectos comerciales desde la conceptualización hasta la implementación exitosa.</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="contacto" class="contacto">
+      <h2>Contáctanos</h2>
+      <p>¿Listo para expandir tu negocio? Conversemos sobre cómo podemos ayudarte.</p>
+      <form class="contacto-form">
+        <div class="form-group">
+          <label for="nombre">Nombre</label>
+          <input type="text" id="nombre" name="nombre" required>
+        </div>
+        <div class="form-group">
+          <label for="empresa">Empresa</label>
+          <input type="text" id="empresa" name="empresa" required>
+        </div>
+        <div class="form-group">
+          <label for="email">Email</label>
+          <input type="email" id="email" name="email" required>
+        </div>
+        <div class="form-group">
+          <label for="mensaje">Mensaje</label>
+          <textarea id="mensaje" name="mensaje" rows="5" required></textarea>
+        </div>
+        <button type="submit" class="submit-button">Enviar Mensaje</button>
+      </form>
     </section>
   </main>
+
   <footer>
     <p>&copy; 2026 Comercio y Negocios Latam SAC. Todos los derechos reservados.</p>
+    <p class="grupo-info">Conectando negocios, expandiendo fronteras</p>
   </footer>
+  
+  <script>
+    // Intersection Observer para animaciones al hacer scroll
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('animate');
+        }
+      });
+    }, {
+      threshold: 0.1,
+      rootMargin: '0px 0px -50px 0px'
+    });
+
+    // Observar todas las secciones y tarjetas
+    document.querySelectorAll('section, .servicio-card').forEach((el) => {
+      observer.observe(el);
+    });
+  </script>
 </body>
 </html>
+
+
