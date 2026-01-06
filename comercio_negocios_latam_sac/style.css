@@ -15,23 +15,22 @@ html {
 header {
   background: #00183E;
   color: #fff;
-  padding: 1rem 2rem;
+  padding: 0.5rem 1rem;
   box-shadow: 0 2px 5px rgba(0,0,0,0.1);
 }
 
 .logo-container {
   text-align: center;
-  padding: 1.5rem;
+  padding: 0.8rem;
   background: #00183E;
   border-radius: 10px;
   box-shadow: 0 4px 8px rgba(0,24,62,0.3);
   margin: 0 auto;
-  max-width: 400px;
-  animation: fadeInDown 1s ease-out;
+  max-width: 350px;
 }
 
 .logo {
-  max-width: 300px;
+  max-width: 250px;
   height: auto;
   display: block;
   margin: 0 auto;
@@ -404,6 +403,8 @@ footer {
   margin-top: 0.5rem;
   font-style: italic;
   color: #c19e5c;
+}
+
 /* Responsive Design */
 @media (max-width: 768px) {
   .hero {
