@@ -2,6 +2,9 @@ import express from 'express';
 import cors from 'cors';
 import helmet from 'helmet';
 import rateLimit from 'express-rate-limit';
+import compression from 'compression';
+import morgan from 'morgan';
+import responseTime from 'response-time';
 import { config } from 'dotenv';
 import path from 'path';
 import { fileURLToPath } from 'url';
@@ -18,6 +21,28 @@ config();
 const app = express();
 const PORT = process.env.PORT || 3000;
 
+// Compresión gzip/deflate (CRÍTICO para performance)
+app.use(compression({
+  level: 6, // Balance entre velocidad y compresión
+  threshold: 1024, // Solo comprimir respuestas > 1KB
+  filter: (req, res) => {
+    if (req.headers['x-no-compression']) {
+      return false;
+    }
+    return compression.filter(req, res);
+  }
+}));
+
+// Response time header (para medir performance)
+app.use(responseTime());
+
+// Logging de requests (solo en desarrollo)
+if (process.env.NODE_ENV !== 'production') {
+  app.use(morgan('dev'));
+} else {
+  app.use(morgan('combined'));
+}
+
 // Configurar CORS - permitir todos los orígenes para mismo dominio
 app.use(cors({
   origin: true, // Permite cualquier origen (incluyendo mismo dominio)
@@ -32,24 +57,35 @@ app.use(helmet({
   crossOriginEmbedderPolicy: false
 }));
 
-// Servir archivos estáticos (Frontend)
-app.use(express.static(__dirname));
-app.use('/css', express.static(path.join(__dirname, 'css')));
-app.use('/js', express.static(path.join(__dirname, 'js')));
-app.use('/img', express.static(path.join(__dirname, 'img')));
-app.use('/pages', express.static(path.join(__dirname, 'pages')));
+// Servir archivos estáticos con cache y extensiones automáticas
+app.use(express.static(__dirname, {
+  extensions: ['html', 'htm'],
+  maxAge: process.env.NODE_ENV === 'production' ? '1d' : 0,
+  etag: true,
+  lastModified: true,
+  index: 'index.html'
+}));
 
-// Middleware para URLs limpias - servir .html sin extensión
-app.use((req, res, next) => {
-  if (req.path.indexOf('.') === -1 && req.path !== '/') {
-    const htmlPath = path.join(__dirname, 'pages', req.path + '.html');
-    const fs = require('fs');
-    if (fs.existsSync(htmlPath)) {
-      return res.sendFile(htmlPath);
-    }
-  }
-  next();
-});
+app.use('/css', express.static(path.join(__dirname, 'css'), {
+  maxAge: process.env.NODE_ENV === 'production' ? '7d' : 0,
+  immutable: true
+}));
+
+app.use('/js', express.static(path.join(__dirname, 'js'), {
+  maxAge: process.env.NODE_ENV === 'production' ? '7d' : 0,
+  immutable: true
+}));
+
+app.use('/img', express.static(path.join(__dirname, 'img'), {
+  maxAge: process.env.NODE_ENV === 'production' ? '30d' : 0,
+  immutable: true
+}));
+
+app.use('/pages', express.static(path.join(__dirname, 'pages'), {
+  extensions: ['html', 'htm'],
+  maxAge: process.env.NODE_ENV === 'production' ? '1d' : 0,
+  etag: true
+}));
 
 // Rate limiting - máximo 100 requests por 15 minutos por IP
 const limiter = rateLimit({
