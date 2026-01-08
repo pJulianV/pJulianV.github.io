@@ -105,26 +105,27 @@ I also develop modern web applications using <strong>JavaScript ES6+</strong>, <
             <h2 class="tituloPrincipal">Get In Touch</h2>
             <p class="contact-intro">Have a project in mind? Let's talk.</p>
 
-            <form name="formularioContacto" action="https://formsubmit.io/send/julianvargastrb@gmail.com" method="POST" netlify>
+            <form id="contact-form" class="contact-form">
 
                 <label for="nombre">Your Name</label>
-                <input class="inputContacto" name="text" type="text" id="nombre" placeholder="John Doe" required>
+                <input class="inputContacto" name="nombre" type="text" id="nombre" placeholder="John Doe" required>
                 
-                <label for="correo">Your Email</label>
-                <input class="inputContacto" name="email" type="email" id="correo" placeholder="john@company.com" required>
+                <label for="email">Your Email</label>
+                <input class="inputContacto" name="email" type="email" id="email" placeholder="john@company.com" required>
 
                 <label for="mensaje">Your Message</label>
                 <textarea class="inputContacto" name="mensaje" id="mensaje" cols="30" rows="10" placeholder="Tell me about your project..." required></textarea>
 
-                <input name="_formsubmit_id" type="text" style="display:none">
+                <div id="form-message" class="form-message"></div>
 
-                <input id="enviarCorreo" class="enviar" value="Send Message" type="submit">
+                <button id="enviarCorreo" class="enviar" type="submit">Send Message</button>
             </form>
             
         </section>
         <!-- <p><a rel="noopener" target="_blank"class="linkFigma" href="https://www.figma.com/file/6RsVqafuwJeb2KKaJVhdO8/Portfolio-pJulianv.github?node-id=2%3A213&t=fKlBncUkV5rdPyjU-0">*Figma del Portafolio</a></p> -->
     </main>
     <script src="script.js"></script>
+    <script src="contact.js"></script>
 </body>
 <footer>
     <a href="#home">

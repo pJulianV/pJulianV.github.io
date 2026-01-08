@@ -2,7 +2,38 @@
 
 Sitio web corporativo para Comercio y Negocios Latam SAC, empresa de consultoría especializada en desarrollo comercial y expansión internacional en América Latina.
 
-## 📁 Estructura del Proyecto
+## � Backend API - NUEVO
+
+Este proyecto ahora incluye un backend completo con:
+
+- ✅ API REST con Express.js
+- ✅ Sistema de envío de emails (Nodemailer)
+- ✅ Validación de formularios (frontend + backend)
+- ✅ Rate limiting y seguridad (Helmet, CORS)
+- ✅ Documentación completa de API
+
+### Inicio Rápido del Backend
+
+```bash
+# 1. Instalar dependencias
+npm install
+
+# 2. Configurar variables de entorno
+copy .env.example .env
+# Editar .env con tus credenciales
+
+# 3. Iniciar servidor de desarrollo
+npm run dev
+
+# 4. Probar
+# Abrir: http://localhost:3000/api/health
+```
+
+📖 **Documentación completa:** Ver [docs/QUICKSTART.md](./docs/QUICKSTART.md) y [docs/API_DOCUMENTATION.md](./docs/API_DOCUMENTATION.md)
+
+---
+
+## �📁 Estructura del Proyecto
 
 ```
 comercio_negocios_latam_sac/

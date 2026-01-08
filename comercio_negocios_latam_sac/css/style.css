@@ -569,6 +569,47 @@ h3 {
   transform: translateY(-2px);
 }
 
+/* Form Messages */
+.form-message {
+  padding: 1rem 1.5rem;
+  border-radius: 8px;
+  margin-bottom: 2rem;
+  animation: slideInDown 0.3s ease;
+}
+
+.form-error {
+  background: #fee;
+  border-left: 4px solid #d00;
+  color: #800;
+}
+
+.form-error ul {
+  margin: 0.5rem 0 0 0;
+  padding-left: 1.5rem;
+}
+
+.form-error li {
+  margin: 0.3rem 0;
+}
+
+.form-success {
+  background: #efe;
+  border-left: 4px solid #0a0;
+  color: #060;
+}
+
+/* Field Validation */
+.field-error {
+  border-color: #d00 !important;
+}
+
+.field-error-msg {
+  color: #d00;
+  font-size: 0.85rem;
+  margin-top: 0.3rem;
+  display: block;
+}
+
 /* Footer */
 footer {
   background: #002156;
