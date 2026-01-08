@@ -2,6 +2,10 @@ name = "portfolio-contact-api"
 main = "workers/contact-api.js"
 compatibility_date = "2024-01-08"
 
+# Ensure only the worker file is included
+[build]
+command = ""
+
 # Route configuration for Cloudflare Pages
 [env.production]
 routes = [

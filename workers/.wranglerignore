@@ -1,0 +1,15 @@
+*.html
+*.css
+*.js
+!workers/contact-api.js
+img/
+comercio_negocios_latam_sac/
+Ecommerce/
+live-doc/
+LocalAI-Assistant/
+Proyecto Marcadores Deportivos/
+Proyectos_Archivados/
+react-router_Spa_Canino/
+shop/
+ToDoApp/
+backend/
