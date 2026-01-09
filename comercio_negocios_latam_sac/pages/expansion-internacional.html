@@ -7,6 +7,10 @@
   <link rel="icon" type="image/jpeg" href="../img/Icon.jpeg">
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="../css/style.css?v=2">
+  
+  <link rel="alternate" hreflang="es" href="https://cynlatam.com/pages/expansion-internacional" />
+  <link rel="alternate" hreflang="en" href="https://cynlatam.com/en/pages/international-expansion" />
+  <link rel="alternate" hreflang="x-default" href="https://cynlatam.com/pages/expansion-internacional" />
 </head>
 <body>
   <header>
@@ -23,11 +27,17 @@
           <li><a href="../index#servicios">Servicios</a></li>
           <li><a href="contacto">Contáctanos</a></li>
         </ul>
+        <div class="language-selector-wrapper">
+          <select id="language-selector" class="language-selector" onchange="window.location.href = this.value === 'es' ? 'expansion-internacional' : '../en/pages/international-expansion'">
+            <option value="es" selected>🇪🇸 Español</option>
+            <option value="en">🇺🇸 English</option>
+          </select>
+        </div>
       </nav>
     </div>
   </header>
 
-  <section class="service-hero" style="background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.7)), url('../img/ExpancionIntern.jpg');">
+  <section class="service-hero" style="background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.7)), url('../img/comercio-internacional-puerto.jpg');">
     <div class="service-hero-content">
       <h1>Expansión Internacional</h1>
       <p>Estrategias de entrada y crecimiento en mercados internacionales</p>

@@ -19,11 +19,17 @@
       </div>
       <nav>
         <ul>
-          <li><a href="../index">Inicio</a></li>
-          <li><a href="../index#nosotros">Nosotros</a></li>
+          <li><a href="../index#inicio">Inicio</a></li>
+          <li><a href="nosotros">Nosotros</a></li>
           <li><a href="../index#servicios">Servicios</a></li>
           <li><a href="contacto">Contáctanos</a></li>
         </ul>
+        <div class="language-selector-wrapper">
+          <select id="language-selector" class="language-selector" onchange="window.location.href = this.value === 'es' ? 'contacto' : '../en/pages/contact'">
+            <option value="es" selected>🇪🇸 Español</option>
+            <option value="en">🇺🇸 English</option>
+          </select>
+        </div>
       </nav>
     </div>
   </header>
@@ -31,56 +37,56 @@
   <main>
     <section id="contacto" class="contacto-page">
       <div class="contacto-container">
-        <h1>Contáctanos</h1>
-        <p class="contacto-intro">Para información sobre Comercio y Negocios Latam SAC, por favor contáctanos. Estamos listos para ayudarte a expandir tu negocio.</p>
+        <h1 data-i18n="contact.title">Contáctanos</h1>
+        <p class="contacto-intro" data-i18n="contact.subtitle">Estamos aquí para ayudarte a impulsar tu negocio</p>
         
         <div class="contacto-content">
           <div class="contacto-info">
-            <h3>Información de Contacto</h3>
+            <h3 data-i18n="contact.title">Información de Contacto</h3>
             <div class="info-item">
-              <strong>Ubicación:</strong>
-              <p>San Isidro, Lima, Perú</p>
+              <strong data-i18n="contact.info.address">DIRECCIÓN:</strong>
+              <p data-i18n="contact.info.addressLine1">San Isidro, Lima, Perú</p>
             </div>
             <div class="info-item">
-              <strong>Email:</strong>
+              <strong data-i18n="contact.info.email">EMAIL:</strong>
               <p><a href="mailto:info@cynlatam.com">info@cynlatam.com</a></p>
             </div>
             <div class="info-item">
-              <strong>Teléfono:</strong>
+              <strong data-i18n="contact.info.phone">TELÉFONO:</strong>
               <p><a href="tel:+51123456789">+51 969 406 930</a></p>
             </div>
             
             <div class="office-hours">
-              <h4>Horario de Atención</h4>
-              <p>Lunes a Viernes: 9:00 AM - 6:00 PM</p>
-              <p>Sábados: 9:00 AM - 1:00 PM</p>
+              <h4 data-i18n="contact.hours.title">Horario de Atención</h4>
+              <p data-i18n="contact.hours.weekdays">Lunes a Viernes: 9:00 AM - 6:00 PM</p>
+              <p data-i18n="contact.hours.saturday">Sábados: 9:00 AM - 1:00 PM</p>
             </div>
           </div>
           
           <div class="contacto-form-wrapper">
-            <h3>Envíanos un Mensaje</h3>
+            <h3 data-i18n="contact.title">Envíanos un Mensaje</h3>
             <form class="contacto-form">
               <div class="form-group">
-                <label for="nombre">Nombre Completo</label>
+                <label for="nombre" data-i18n="contact.form.name">NOMBRE</label>
                 <input type="text" id="nombre" name="nombre" required>
               </div>
               <div class="form-group">
-                <label for="empresa">Empresa</label>
+                <label for="empresa" data-i18n="contact.form.company">EMPRESA</label>
                 <input type="text" id="empresa" name="empresa" required>
               </div>
               <div class="form-group">
-                <label for="email">Correo Electrónico</label>
+                <label for="email" data-i18n="contact.form.email">CORREO ELECTRÓNICO</label>
                 <input type="email" id="email" name="email" required>
               </div>
               <div class="form-group">
-                <label for="telefono">Teléfono</label>
+                <label for="telefono" data-i18n="contact.form.phone">TELÉFONO</label>
                 <input type="tel" id="telefono" name="telefono">
               </div>
               <div class="form-group">
-                <label for="mensaje">Mensaje</label>
+                <label for="mensaje" data-i18n="contact.form.message">MENSAJE</label>
                 <textarea id="mensaje" name="mensaje" rows="6" required></textarea>
               </div>
-              <button type="submit" class="submit-button">Enviar Mensaje</button>
+              <button type="submit" class="submit-button" data-i18n="contact.form.submit">ENVIAR MENSAJE</button>
             </form>
           </div>
         </div>
@@ -91,53 +97,52 @@
   <footer>
     <div class="footer-container">
       <div class="footer-section">
-        <h4>Soluciones</h4>
+        <h4 data-i18n="footer.solutions.title">SOLUCIONES</h4>
         <ul>
-          <li><a href="desarrollo-negocios">Desarrollo de Negocios</a></li>
-          <li><a href="inteligencia-comercial">Inteligencia Comercial</a></li>
-          <li><a href="expansion-internacional">Expansión Internacional</a></li>
-          <li><a href="consultoria-estrategica">Consultoría Estratégica</a></li>
-          <li><a href="gestion-proyectos">Gestión de Proyectos</a></li>
-          <li><a href="asesoria-financiera">Asesoría Financiera</a></li>
+          <li><a href="desarrollo-negocios" data-i18n="footer.solutions.businessDevelopment">Desarrollo de Negocios</a></li>
+          <li><a href="inteligencia-comercial" data-i18n="footer.solutions.commercialIntelligence">Inteligencia Comercial</a></li>
+          <li><a href="expansion-internacional" data-i18n="footer.solutions.internationalExpansion">Expansión Internacional</a></li>
+          <li><a href="consultoria-estrategica" data-i18n="footer.solutions.strategicConsulting">Consultoría Estratégica</a></li>
+          <li><a href="gestion-proyectos" data-i18n="footer.solutions.projectManagement">Gestión de Proyectos</a></li>
         </ul>
       </div>
       
       <div class="footer-section">
-        <h4>Sectores</h4>
+        <h4 data-i18n="footer.sectors.title">SECTORES</h4>
         <ul>
-          <li><a href="#">Tecnología</a></li>
-          <li><a href="#">Manufactura</a></li>
-          <li><a href="#">Retail</a></li>
-          <li><a href="#">Servicios</a></li>
-          <li><a href="#">Exportación</a></li>
+          <li><a href="#" data-i18n="footer.sectors.technology">Tecnología</a></li>
+          <li><a href="#" data-i18n="footer.sectors.manufacturing">Manufactura</a></li>
+          <li><a href="#" data-i18n="footer.sectors.retail">Retail</a></li>
+          <li><a href="#" data-i18n="footer.sectors.services">Servicios</a></li>
+          <li><a href="#" data-i18n="footer.sectors.export">Exportación</a></li>
         </ul>
       </div>
       
       <div class="footer-section">
-        <h4>Recursos</h4>
+        <h4 data-i18n="footer.resources.title">RECURSOS</h4>
         <ul>
-          <li><a href="#">Insights</a></li>
-          <li><a href="#">Casos de Éxito</a></li>
-          <li><a href="#">Blog</a></li>
-          <li><a href="#">Eventos</a></li>
-          <li><a href="#">Noticias</a></li>
+          <li><a href="#" data-i18n="footer.resources.insights">Insights</a></li>
+          <li><a href="#" data-i18n="footer.resources.successCases">Casos de Éxito</a></li>
+          <li><a href="#" data-i18n="footer.resources.blog">Blog</a></li>
+          <li><a href="#" data-i18n="footer.resources.events">Eventos</a></li>
+          <li><a href="#" data-i18n="footer.resources.news">Noticias</a></li>
         </ul>
       </div>
       
       <div class="footer-section">
-        <h4>Empresa</h4>
+        <h4 data-i18n="footer.company.title">EMPRESA</h4>
         <ul>
-          <li><a href="../index#propuesta">Sobre Nosotros</a></li>
-          <li><a href="#">Equipo</a></li>
-          <li><a href="#">Carreras</a></li>
-          <li><a href="contacto">Contacto</a></li>
-          <li><a href="#">Ubicación</a></li>
+          <li><a href="../index#propuesta" data-i18n="footer.company.aboutUs">Sobre Nosotros</a></li>
+          <li><a href="#" data-i18n="footer.company.team">Equipo</a></li>
+          <li><a href="#" data-i18n="footer.company.careers">Carreras</a></li>
+          <li><a href="contacto" data-i18n="footer.company.contact">Contacto</a></li>
+          <li><a href="#" data-i18n="footer.company.location">Ubicación</a></li>
         </ul>
       </div>
       
       <div class="footer-section footer-contact">
-        <h4>Contáctanos</h4>
-        <p>San Isidro, Lima, Perú</p>
+        <h4 data-i18n="footer.contactUs.title">CONTÁCTANOS</h4>
+        <p data-i18n="footer.contactUs.location">San Isidro, Lima, Perú</p>
         <p>info@cynlatam.com</p>
         <p>+51 969 406 930</p>
         <div class="social-links">
@@ -150,7 +155,7 @@
     
     <div class="footer-bottom">
       <div class="footer-bottom-container">
-        <p>&copy; 2026 Comercio y Negocios Latam SAC. Todos los derechos reservados.</p>
+        <p>&copy; 2026 Comercio y Negocios Latam SAC. <span data-i18n="footer.allRightsReserved">Todos los derechos reservados</span>.</p>
         <div class="footer-links">
           <a href="politicas#privacidad">Privacidad</a>
           <a href="politicas#terminos">Términos de Uso</a>
@@ -158,7 +163,7 @@
           <a href="politicas#cookies">Cookies</a>
         </div>
       </div>
-      <p class="tagline">Conectando negocios, expandiendo fronteras</p>
+      <p class="tagline" data-i18n="footer.tagline">Conectando negocios, expandiendo fronteras</p>
     </div>
   </footer>
   

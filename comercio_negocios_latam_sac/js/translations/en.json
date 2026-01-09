@@ -28,12 +28,66 @@
     "startProject": "Start Project",
     "startExpansion": "Start Expansion"
   },
+  "contact": {
+    "title": "Contact Us",
+    "subtitle": "We're here to help boost your business",
+    "info": {
+      "address": "ADDRESS:",
+      "addressLine1": "San Isidro, Lima, Peru",
+      "email": "EMAIL:",
+      "phone": "PHONE:"
+    },
+    "hours": {
+      "title": "Business Hours",
+      "weekdays": "Monday to Friday: 9:00 AM - 6:00 PM",
+      "saturday": "Saturday: 9:00 AM - 1:00 PM"
+    },
+    "form": {
+      "name": "NAME",
+      "company": "COMPANY",
+      "email": "EMAIL",
+      "phone": "PHONE",
+      "message": "MESSAGE",
+      "submit": "SEND MESSAGE"
+    }
+  },
   "footer": {
-    "solutions": "Solutions",
-    "sectors": "Sectors",
-    "resources": "Resources",
-    "company": "Company",
-    "contactUs": "Contact Us",
+    "solutions": {
+      "title": "SOLUTIONS",
+      "businessDevelopment": "Business Development",
+      "commercialIntelligence": "Commercial Intelligence",
+      "internationalExpansion": "International Expansion",
+      "strategicConsulting": "Strategic Consulting",
+      "projectManagement": "Project Management"
+    },
+    "sectors": {
+      "title": "SECTORS",
+      "technology": "Technology",
+      "manufacturing": "Manufacturing",
+      "retail": "Retail",
+      "services": "Services",
+      "export": "Export"
+    },
+    "resources": {
+      "title": "RESOURCES",
+      "insights": "Insights",
+      "successCases": "Success Cases",
+      "blog": "Blog",
+      "events": "Events",
+      "news": "News"
+    },
+    "company": {
+      "title": "COMPANY",
+      "aboutUs": "About Us",
+      "team": "Team",
+      "careers": "Careers",
+      "contact": "Contact",
+      "location": "Location"
+    },
+    "contactUs": {
+      "title": "CONTACT US",
+      "location": "San Isidro, Lima, Peru"
+    },
     "allRightsReserved": "All rights reserved",
     "tagline": "Connecting businesses, expanding borders",
     "groupCasnu": "A CASNU Group company"

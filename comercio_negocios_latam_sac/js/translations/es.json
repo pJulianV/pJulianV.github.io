@@ -24,16 +24,70 @@
     "getStarted": "Comenzar",
     "requestConsultation": "Solicitar Consulta",
     "requestAnalysis": "Solicitar Análisis",
-    "scheduleMe  eting": "Agendar Reunión",
+    "scheduleMeeting": "Agendar Reunión",
     "startProject": "Iniciar Proyecto",
     "startExpansion": "Iniciar Expansión"
   },
+  "contact": {
+    "title": "Contáctanos",
+    "subtitle": "Estamos aquí para ayudarte a impulsar tu negocio",
+    "info": {
+      "address": "DIRECCIÓN:",
+      "addressLine1": "San Isidro, Lima, Perú",
+      "email": "EMAIL:",
+      "phone": "TELÉFONO:"
+    },
+    "hours": {
+      "title": "Horario de Atención",
+      "weekdays": "Lunes a Viernes: 9:00 AM - 6:00 PM",
+      "saturday": "Sábados: 9:00 AM - 1:00 PM"
+    },
+    "form": {
+      "name": "NOMBRE",
+      "company": "EMPRESA",
+      "email": "CORREO ELECTRÓNICO",
+      "phone": "TELÉFONO",
+      "message": "MENSAJE",
+      "submit": "ENVIAR MENSAJE"
+    }
+  },
   "footer": {
-    "solutions": "Soluciones",
-    "sectors": "Sectores",
-    "resources": "Recursos",
-    "company": "Empresa",
-    "contactUs": "Contáctanos",
+    "solutions": {
+      "title": "SOLUCIONES",
+      "businessDevelopment": "Desarrollo de Negocios",
+      "commercialIntelligence": "Inteligencia Comercial",
+      "internationalExpansion": "Expansión Internacional",
+      "strategicConsulting": "Consultoría Estratégica",
+      "projectManagement": "Gestión de Proyectos"
+    },
+    "sectors": {
+      "title": "SECTORES",
+      "technology": "Tecnología",
+      "manufacturing": "Manufactura",
+      "retail": "Retail",
+      "services": "Servicios",
+      "export": "Exportación"
+    },
+    "resources": {
+      "title": "RECURSOS",
+      "insights": "Insights",
+      "successCases": "Casos de Éxito",
+      "blog": "Blog",
+      "events": "Eventos",
+      "news": "Noticias"
+    },
+    "company": {
+      "title": "EMPRESA",
+      "aboutUs": "Sobre Nosotros",
+      "team": "Equipo",
+      "careers": "Carreras",
+      "contact": "Contacto",
+      "location": "Ubicación"
+    },
+    "contactUs": {
+      "title": "CONTÁCTANOS",
+      "location": "San Isidro, Lima, Perú"
+    },
     "allRightsReserved": "Todos los derechos reservados",
     "tagline": "Conectando negocios, expandiendo fronteras",
     "groupCasnu": "Una empresa del Grupo CASNU"

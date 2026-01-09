@@ -7,6 +7,10 @@
   <link rel="icon" type="image/jpeg" href="../img/Icon.jpeg">
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="../css/style.css?v=2">
+  
+  <link rel="alternate" hreflang="es" href="https://cynlatam.com/pages/insights" />
+  <link rel="alternate" hreflang="en" href="https://cynlatam.com/en/pages/insights" />
+  <link rel="alternate" hreflang="x-default" href="https://cynlatam.com/pages/insights" />
 </head>
 <body>
   <header>
@@ -23,6 +27,12 @@
           <li><a href="../index#servicios">Servicios</a></li>
           <li><a href="contacto">Contáctanos</a></li>
         </ul>
+        <div class="language-selector-wrapper">
+          <select id="language-selector" class="language-selector" onchange="window.location.href = this.value === 'es' ? 'insights' : '../en/pages/insights'">
+            <option value="es" selected>🇪🇸 Español</option>
+            <option value="en">🇺🇸 English</option>
+          </select>
+        </div>
       </nav>
     </div>
   </header>

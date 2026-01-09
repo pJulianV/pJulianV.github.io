@@ -7,6 +7,10 @@
   <link rel="icon" type="image/jpeg" href="../img/Icon.jpeg">
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="../css/style.css?v=2">
+  
+  <link rel="alternate" hreflang="es" href="https://cynlatam.com/pages/asesoria-financiera" />
+  <link rel="alternate" hreflang="en" href="https://cynlatam.com/en/pages/financial-advisory" />
+  <link rel="alternate" hreflang="x-default" href="https://cynlatam.com/pages/asesoria-financiera" />
 </head>
 <body>
   <header>
@@ -23,11 +27,17 @@
           <li><a href="../index#servicios">Servicios</a></li>
           <li><a href="contacto">Contáctanos</a></li>
         </ul>
+        <div class="language-selector-wrapper">
+          <select id="language-selector" class="language-selector" onchange="window.location.href = this.value === 'es' ? 'asesoria-financiera' : '../en/pages/financial-advisory'">
+            <option value="es" selected>🇪🇸 Español</option>
+            <option value="en">🇺🇸 English</option>
+          </select>
+        </div>
       </nav>
     </div>
   </header>
 
-  <section class="service-hero" style="background: linear-gradient(rgba(0,33,86,0.85), rgba(0,33,86,0.85)), url('../img/InteligenciaComercial.jpg') center/cover;">
+  <section class="service-hero" style="background: linear-gradient(rgba(0,33,86,0.85), rgba(0,33,86,0.85)), url('../img/asesoria-financiera.jpg') center/cover;">
     <div class="service-hero-content">
       <h1>Asesoría Financiera Estratégica</h1>
       <p>Soluciones financieras inteligentes para el crecimiento empresarial</p>
