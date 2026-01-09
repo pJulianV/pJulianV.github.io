@@ -1,0 +1,41 @@
+{
+  "header": {
+    "menu": {
+      "home": "Home",
+      "about": "About Us",
+      "services": "Services",
+      "contact": "Contact Us"
+    },
+    "language": "Language"
+  },
+  "hero": {
+    "title": "Business Development",
+    "subtitle": "Commercial Intelligence and Strategic Expansion in Latin America",
+    "cta": "Discover Our Services"
+  },
+  "services": {
+    "title": "Our Services",
+    "subtitle": "Comprehensive solutions for your business growth"
+  },
+  "common": {
+    "readMore": "Read more",
+    "contactUs": "Contact us",
+    "learnMore": "Learn more",
+    "getStarted": "Get started",
+    "requestConsultation": "Request Consultation",
+    "requestAnalysis": "Request Analysis",
+    "scheduleMeeting": "Schedule Meeting",
+    "startProject": "Start Project",
+    "startExpansion": "Start Expansion"
+  },
+  "footer": {
+    "solutions": "Solutions",
+    "sectors": "Sectors",
+    "resources": "Resources",
+    "company": "Company",
+    "contactUs": "Contact Us",
+    "allRightsReserved": "All rights reserved",
+    "tagline": "Connecting businesses, expanding borders",
+    "groupCasnu": "A CASNU Group company"
+  }
+}

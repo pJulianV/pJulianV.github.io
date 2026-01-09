@@ -1,0 +1,41 @@
+{
+  "header": {
+    "menu": {
+      "home": "Inicio",
+      "about": "Nosotros",
+      "services": "Servicios",
+      "contact": "Contáctanos"
+    },
+    "language": "Idioma"
+  },
+  "hero": {
+    "title": "Desarrollo de Negocios",
+    "subtitle": "Inteligencia Comercial y Expansión Estratégica en Latinoamérica",
+    "cta": "Conoce Nuestros Servicios"
+  },
+  "services": {
+    "title": "Nuestros Servicios",
+    "subtitle": "Soluciones integrales para el crecimiento de su negocio"
+  },
+  "common": {
+    "readMore": "Leer más",
+    "contactUs": "Contáctanos",
+    "learnMore": "Conocer más",
+    "getStarted": "Comenzar",
+    "requestConsultation": "Solicitar Consulta",
+    "requestAnalysis": "Solicitar Análisis",
+    "scheduleMe  eting": "Agendar Reunión",
+    "startProject": "Iniciar Proyecto",
+    "startExpansion": "Iniciar Expansión"
+  },
+  "footer": {
+    "solutions": "Soluciones",
+    "sectors": "Sectores",
+    "resources": "Recursos",
+    "company": "Empresa",
+    "contactUs": "Contáctanos",
+    "allRightsReserved": "Todos los derechos reservados",
+    "tagline": "Conectando negocios, expandiendo fronteras",
+    "groupCasnu": "Una empresa del Grupo CASNU"
+  }
+}

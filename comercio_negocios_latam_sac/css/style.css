@@ -71,6 +71,45 @@ nav a:hover {
   background: rgba(255,255,255,0.05);
 }
 
+/* Language Selector */
+.language-selector-wrapper {
+  display: flex;
+  align-items: center;
+  margin-left: 1rem;
+  padding-left: 1rem;
+  border-left: 1px solid rgba(255,255,255,0.2);
+}
+
+.language-selector {
+  background: rgba(255,255,255,0.1);
+  color: #fff;
+  border: 1px solid rgba(255,255,255,0.3);
+  padding: 0.5rem 0.8rem;
+  border-radius: 5px;
+  font-size: 0.9rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-family: 'Poppins', Arial, sans-serif;
+  outline: none;
+}
+
+.language-selector:hover {
+  background: rgba(255,255,255,0.15);
+  border-color: #c19e5c;
+}
+
+.language-selector:focus {
+  border-color: #c19e5c;
+  box-shadow: 0 0 0 2px rgba(193,158,92,0.2);
+}
+
+.language-selector option {
+  background: #002156;
+  color: #fff;
+  padding: 0.5rem;
+}
+
 /* Hero Section */
 .hero {
   background: #f5f5f5;
