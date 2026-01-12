@@ -1,0 +1,13 @@
+{
+  "name": "contact-api-worker",
+  "version": "1.0.0",
+  "description": "Cloudflare Worker for contact form",
+  "main": "contact-api.js",
+  "type": "module",
+  "scripts": {
+    "deploy": "wrangler deploy"
+  },
+  "devDependencies": {
+    "wrangler": "^3.0.0"
+  }
+}

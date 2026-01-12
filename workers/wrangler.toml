@@ -2,10 +2,13 @@ name = "portfolio-contact-api"
 main = "contact-api.js"
 compatibility_date = "2024-01-08"
 
-# Route configuration - this will handle /api/contact on your domain
-[[routes]]
-pattern = "julianvargasdev.com/api/contact"
-zone_name = "julianvargasdev.com"
+# Worker configuration
+workers_dev = true
+
+# No routes for now - will use workers.dev subdomain first
+# [[routes]]
+# pattern = "julianvargasdev.com/api/contact"
+# zone_name = "julianvargasdev.com"
 
 # Environment variables (secrets should be added via CLI or dashboard)
 # Add your RESEND_API_KEY as a secret:

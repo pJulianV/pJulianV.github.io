@@ -1,7 +1,7 @@
 // Manejo del formulario de contacto
 
-// URL del backend - usar ruta relativa ya que frontend y backend están juntos
-const API_URL = window.location.origin;
+// URL del backend - Cloudflare Worker (siempre activo, gratis)
+const API_URL = 'https://julianvargasdev.com';
 
 document.addEventListener('DOMContentLoaded', () => {
   const contactForm = document.querySelector('.contacto-form');
