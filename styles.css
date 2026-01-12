@@ -376,9 +376,10 @@ nav li{
 }
 
 .descripcionAboutMe{
-    margin: 20px 0 ;
+    margin: 30px 0;
     font-size: 18px;
     line-height: 1.8;
+    color: #334155;
 }
 .contenidoAboutMe{
     padding: 4rem;
@@ -511,10 +512,11 @@ nav li{
 
 .section-description {
     text-align: center;
-    color: rgba(214, 225, 231, 0.8);
+    color: rgba(214, 225, 231, 0.9);
     font-size: 1.15rem;
     margin: -30px auto 50px;
     max-width: 600px;
+    padding: 0 24px;
 }
 
 .project-impact {
