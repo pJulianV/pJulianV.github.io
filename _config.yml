@@ -1,0 +1,31 @@
+# Jekyll Configuration for GitHub Pages
+
+# Exclude these files/folders from processing
+exclude:
+  - node_modules/
+  - vendor/
+  - .bundle/
+  - .git/
+  - .gitignore
+  - Gemfile
+  - Gemfile.lock
+  - package.json
+  - package-lock.json
+  - wrangler.toml
+  - wrangler.jsonc
+  - workers/
+  - functions/
+  - backend/
+  - README.md
+  - CONTACT_FORM_SETUP.md
+  - comercio_negocios_latam_sac/node_modules/
+  - comercio_negocios_latam_sac/package.json
+  - LocalAI-Assistant/node_modules/
+  - LocalAI-Assistant/package.json
+  - live-doc/node_modules/
+  - live-doc/package.json
+
+# Keep these files
+include:
+  - _headers
+  - .nojekyll
