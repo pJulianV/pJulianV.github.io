@@ -380,9 +380,11 @@ nav li{
     font-size: 18px;
     line-height: 1.8;
     color: #334155;
+    text-align: left;
+    padding: 0 20px;
 }
 .contenidoAboutMe{
-    padding: 3rem 5rem;
+    padding: 3rem 3rem;
     margin: 20px 7%;
     width: 50%;
     text-align: center;
