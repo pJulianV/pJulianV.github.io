@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sin Conexión - Comercio y Negocios Latam SAC</title>
+    <meta name="description" content="Página offline de Comercio y Negocios Latam SAC">
+    <link rel="stylesheet" href="/css/style.css">
+    <style>
+        .offline-container {
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: linear-gradient(135deg, #002156 0%, #003d7a 100%);
+            color: white;
+            text-align: center;
+            padding: 2rem;
+        }
+
+        .offline-content {
+            max-width: 600px;
+        }
+
+        .offline-icon {
+            font-size: 4rem;
+            margin-bottom: 1rem;
+            opacity: 0.8;
+        }
+
+        .offline-title {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+            font-weight: 300;
+        }
+
+        .offline-message {
+            font-size: 1.2rem;
+            margin-bottom: 2rem;
+            opacity: 0.9;
+        }
+
+        .retry-btn {
+            background: #c19e5c;
+            color: #002156;
+            border: none;
+            padding: 1rem 2rem;
+            font-size: 1.1rem;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .retry-btn:hover {
+            background: #d4af37;
+            transform: translateY(-2px);
+        }
+
+        .loading {
+            display: none;
+            margin-top: 1rem;
+        }
+
+        .loading.show {
+            display: block;
+        }
+    </style>
+</head>
+<body>
+    <div class="offline-container">
+        <div class="offline-content">
+            <div class="offline-icon">📱</div>
+            <h1 class="offline-title">Sin Conexión a Internet</h1>
+            <p class="offline-message">
+                Parece que has perdido la conexión a internet. No te preocupes,
+                puedes continuar explorando algunas secciones de nuestro sitio web
+                que están disponibles sin conexión.
+            </p>
+            <button class="retry-btn" onclick="retryConnection()">
+                Intentar Reconectar
+            </button>
+            <div class="loading" id="loading">
+                <p>Verificando conexión...</p>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function retryConnection() {
+            const btn = document.querySelector('.retry-btn');
+            const loading = document.getElementById('loading');
+
+            btn.disabled = true;
+            btn.textContent = 'Conectando...';
+            loading.classList.add('show');
+
+            // Check connection by trying to fetch a small resource
+            fetch('/manifest.json', {
+                method: 'HEAD',
+                cache: 'no-cache'
+            })
+            .then(() => {
+                // Connection restored
+                window.location.reload();
+            })
+            .catch(() => {
+                // Still offline
+                btn.disabled = false;
+                btn.textContent = 'Intentar Reconectar';
+                loading.classList.remove('show');
+
+                // Show message
+                if (!document.querySelector('.error-msg')) {
+                    const errorMsg = document.createElement('p');
+                    errorMsg.className = 'error-msg';
+                    errorMsg.style.color = '#ff6b6b';
+                    errorMsg.style.marginTop = '1rem';
+                    errorMsg.textContent = 'Aún sin conexión. Revisa tu conexión a internet.';
+                    document.querySelector('.offline-content').appendChild(errorMsg);
+                }
+            });
+        }
+
+        // Auto-retry every 30 seconds
+        setInterval(() => {
+            if (navigator.onLine) {
+                fetch('/manifest.json', {
+                    method: 'HEAD',
+                    cache: 'no-cache'
+                })
+                .then(() => {
+                    window.location.reload();
+                })
+                .catch(() => {
+                    // Still offline, continue
+                });
+            }
+        }, 30000);
+
+        // Listen for online event
+        window.addEventListener('online', () => {
+            retryConnection();
+        });
+    </script>
+</body>
+</html>

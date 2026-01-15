@@ -1,0 +1,15 @@
+{
+    "keep": {
+        "days": true,
+        "amount": 90
+    },
+    "auditLog": "C:\\Users\\Usuario\\Desktop\\Julian\\Workspace\\03_Web_Projects\\pJulianV.github.io\\comercio_negocios_latam_sac\\logs\\.019bb7ad0948e0a28e80091493be01decef4890a-audit.json",
+    "files": [
+        {
+            "date": 1768408683219,
+            "name": "C:\\Users\\Usuario\\Desktop\\Julian\\Workspace\\03_Web_Projects\\pJulianV.github.io\\comercio_negocios_latam_sac\\logs\\audit-2026-01-14.log",
+            "hash": "075db522e7064c69ef89e04d528c35ac2d855070f8f70373a6415200171fc025"
+        }
+    ],
+    "hashType": "sha256"
+}
