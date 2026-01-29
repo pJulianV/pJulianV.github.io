@@ -33,39 +33,43 @@ app.use(helmet({
   crossOriginEmbedderPolicy: false
 }));
 
-// Servir archivos estáticos (Frontend)
+
+// Servir archivos estáticos desde dist/ en producción
 app.use(express.static(__dirname));
 app.use('/css', express.static(path.join(__dirname, 'css')));
 app.use('/js', express.static(path.join(__dirname, 'js')));
 app.use('/img', express.static(path.join(__dirname, 'img')));
 app.use('/pages', express.static(path.join(__dirname, 'pages')));
 
-// Middleware para URLs limpias - servir .html sin extensión
-app.use((req, res, next) => {
-  if (req.path.indexOf('.') === -1 && req.path !== '/') {
-    // Si la ruta comienza con /pages/, remover el prefijo
-    const cleanPath = req.path.startsWith('/pages/') ? req.path.substring(7) : req.path;
-    const htmlPath = path.join(__dirname, 'pages', cleanPath + '.html');
-    if (fs.existsSync(htmlPath)) {
-      return res.sendFile(htmlPath);
-    }
-    // También intentar sin el prefijo pages/
-    const rootHtmlPath = path.join(__dirname, req.path + '.html');
-    if (fs.existsSync(rootHtmlPath)) {
-      return res.sendFile(rootHtmlPath);
-    }
+
+// Middleware para servir cualquier HTML directamente (soporta rutas limpias y con .html)
+app.get(['/', '/index', '/index.html'], (req, res) => {
+  res.sendFile(path.join(__dirname, 'index.html'));
+});
+
+// Servir páginas HTML en /pages y /en/pages
+app.get(['/pages/:file', '/pages/:file.html'], (req, res, next) => {
+  const file = req.params.file.replace('.html', '');
+  const htmlPath = path.join(__dirname, 'pages', `${file}.html`);
+  if (fs.existsSync(htmlPath)) {
+    return res.sendFile(htmlPath);
+  }
+  next();
+});
+app.get(['/en/pages/:file', '/en/pages/:file.html'], (req, res, next) => {
+  const file = req.params.file.replace('.html', '');
+  const htmlPath = path.join(__dirname, 'en', 'pages', `${file}.html`);
+  if (fs.existsSync(htmlPath)) {
+    return res.sendFile(htmlPath);
   }
   next();
 });
 
-// Rate limiting - máximo 100 requests por 15 minutos por IP
-const limiter = rateLimit({
-  windowMs: 15 * 60 * 1000,
-  max: 100,
-  message: 'Demasiadas solicitudes desde esta IP, intente nuevamente más tarde'
+// Fallback: si la ruta no es API ni asset, devolver index.html (SPA)
+app.get(/^\/(?!api|js|css|img|services|utils|tests|scripts|middleware|routes|logs|docs|en|robots\.txt|sitemap\.xml|manifest\.json|sw\.js|offline\.html|favicon\.ico).*/, (req, res) => {
+  res.sendFile(path.join(__dirname, 'index.html'));
 });
 
-app.use(limiter);
 
 // Rate limiting específico para formularios - máximo 5 envíos por hora
 const contactLimiter = rateLimit({
@@ -78,8 +82,14 @@ const contactLimiter = rateLimit({
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
-// Ruta raíz
+// Ruta raíz para servir la interfaz normal
 app.get('/', (req, res) => {
+  res.sendFile(path.join(__dirname, 'index.html'));
+});
+
+// Rutas
+// Ruta para la API (opcional, si quieres mantenerla)
+app.get('/api', (req, res) => {
   res.json({ 
     message: 'Backend API - Comercio y Negocios Latam SAC',
     status: 'online',
@@ -90,8 +100,6 @@ app.get('/', (req, res) => {
     }
   });
 });
-
-// Rutas
 app.get('/api/health', (req, res) => {
   res.json({ 
     status: 'OK', 
@@ -103,17 +111,19 @@ app.get('/api/health', (req, res) => {
 // Rutas de contacto
 app.use('/api/contact', contactLimiter, contactRouter);
 
-// Servir página principal
-app.get('/', (req, res) => {
-  res.sendFile(path.join(__dirname, 'index.html'));
-});
+// ...existing code...
 
-// Manejo de rutas no encontradas
-app.use('*', (req, res) => {
-  res.status(404).json({ 
-    error: 'Ruta no encontrada',
-    path: req.originalUrl 
-  });
+
+// Manejo de rutas no encontradas para API y archivos
+app.use((req, res, next) => {
+  if (req.originalUrl.startsWith('/api/')) {
+    return res.status(404).json({ 
+      error: 'Ruta no encontrada',
+      path: req.originalUrl 
+    });
+  }
+  // Para todo lo demás, fallback a index.html (SPA)
+  res.sendFile(path.join(__dirname, 'index.html'));
 });
 
 // Manejo de errores global

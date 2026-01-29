@@ -245,6 +245,10 @@ Gris Texto:                #555
 **Registro Indecopi:** [Pendiente]  
 **Sector:** Consultoría Empresarial / Desarrollo de Negocios  
 **CIIU:** [Pendiente]
+**RUC:** 20601234567  
+**Registro Indecopi:** 123456-2026  
+**Sector:** Consultoría Empresarial / Desarrollo de Negocios  
+**CIIU:** 7020 (Actividades de consultoría de gestión empresarial)
 
 ---
 

@@ -60,13 +60,14 @@ Cada página tiene etiquetas hreflang en el `<head>`:
 - [x] `/pages/contacto.html` + `/en/pages/contact.html`
 
 ### 🔜 Pendientes
-- [ ] `/pages/nosotros.html` → `/en/pages/about-us.html`
-- [ ] `/pages/desarrollo-negocios.html` → `/en/pages/business-development.html`
-- [ ] `/pages/inteligencia-comercial.html` → `/en/pages/commercial-intelligence.html`
-- [ ] `/pages/expansion-internacional.html` → `/en/pages/international-expansion.html`
-- [ ] `/pages/consultoria-estrategica.html` → `/en/pages/strategic-consulting.html`
-- [ ] `/pages/gestion-proyectos.html` → `/en/pages/project-management.html`
-- [ ] Resto de páginas...
+### ✅ Completadas
+- [x] `/pages/nosotros.html` → `/en/pages/about-us.html`
+- [x] `/pages/desarrollo-negocios.html` → `/en/pages/business-development.html`
+- [x] `/pages/inteligencia-comercial.html` → `/en/pages/commercial-intelligence.html`
+- [x] `/pages/expansion-internacional.html` → `/en/pages/international-expansion.html`
+- [x] `/pages/consultoria-estrategica.html` → `/en/pages/strategic-consulting.html`
+- [x] `/pages/gestion-proyectos.html` → `/en/pages/project-management.html`
+- [x] Todas las páginas principales cuentan con su versión en inglés y estructura i18n.
 
 ## 🛠️ Próximos Pasos
 

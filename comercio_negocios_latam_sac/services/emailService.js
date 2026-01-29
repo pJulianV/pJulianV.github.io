@@ -22,7 +22,8 @@ export const sendContactEmail = async (data) => {
     }
 
     const { nombre, empresa, email, telefono, mensaje, timestamp } = data;
-    const adminEmail = process.env.EMAIL_TO || 'info@comercionegocioslatam.com';
+    // Permitir definir destinatario por variable de entorno o usar el default
+    const adminEmail = process.env.EMAIL_TO || 'julianvargastrb@gmail.com';
 
     // HTML para email al administrador
     const adminHtml = `
@@ -124,81 +125,11 @@ export const sendContactEmail = async (data) => {
       </html>
     `;
 
-    // HTML para email de confirmación al usuario
-    const userHtml = `
-      <!DOCTYPE html>
-      <html>
-      <head>
-        <style>
-          body {
-            font-family: 'Arial', sans-serif;
-            line-height: 1.6;
-            color: #333;
-          }
-          .container {
-            max-width: 600px;
-            margin: 0 auto;
-            padding: 20px;
-            background-color: #f9f9f9;
-          }
-          .header {
-            background-color: #002156;
-            color: white;
-            padding: 30px;
-            text-align: center;
-            border-radius: 5px 5px 0 0;
-          }
-          .content {
-            background-color: white;
-            padding: 30px;
-            border-radius: 0 0 5px 5px;
-          }
-          .highlight {
-            color: #c19e5c;
-          }
-          .footer {
-            margin-top: 20px;
-            padding-top: 20px;
-            border-top: 1px solid #eee;
-            font-size: 12px;
-            color: #666;
-          }
-        </style>
-      </head>
-      <body>
-        <div class="container">
-          <div class="header">
-            <h1>¡Gracias por contactarnos!</h1>
-          </div>
-          <div class="content">
-            <p>Hola <strong>${nombre}</strong>,</p>
-            
-            <p>Hemos recibido tu mensaje y nos pondremos en contacto contigo lo antes posible.</p>
-            
-            <p>En <strong class="highlight">Comercio y Negocios Latam SAC</strong>, estamos comprometidos con impulsar el crecimiento de tu empresa en mercados nacionales e internacionales.</p>
-            
-            <p>Mientras tanto, puedes conocer más sobre nuestros servicios en nuestra página web.</p>
-            
-            <p>Saludos cordiales,<br>
-            <strong>El equipo de Comercio y Negocios Latam SAC</strong><br>
-            <em>Una empresa del Grupo CASNU</em></p>
-            
-            <div class="footer">
-              <p><strong>Comercio y Negocios Latam SAC</strong><br>
-              San Isidro, Lima, Perú<br>
-              📧 info@comercionegocioslatam.com<br>
-              📱 +51 969 406 930</p>
-            </div>
-          </div>
-        </div>
-      </body>
-      </html>
-    `;
 
     // Enviar email al administrador
     const result = await resend.emails.send({
       from: 'Comercio Negocios Latam <onboarding@resend.dev>',
-      to: adminEmail,
+      to: [adminEmail],
       subject: `Nuevo contacto desde el sitio web - ${empresa}`,
       html: adminHtml
     });

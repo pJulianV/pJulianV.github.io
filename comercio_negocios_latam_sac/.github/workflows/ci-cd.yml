@@ -104,6 +104,8 @@ jobs:
       - name: Install dependencies
         run: npm ci
 
+      - name: Minify assets
+        run: npm run build
       - name: Build (if applicable)
         run: echo "Build step - add your build command here if needed"
 

@@ -1,0 +1,38 @@
+/* Language Selector */
+.language-selector-wrapper {
+  display: flex;
+  align-items: center;
+  padding-left: 1.5rem;
+  margin-left: auto;
+}
+
+.language-selector {
+  background: rgba(255,255,255,0.1);
+  color: #fff;
+  border: 1px solid rgba(255,255,255,0.3);
+  padding: 0.6rem 1rem;
+  border-radius: 5px;
+  font-size: 0.9rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-family: 'Poppins', Arial, sans-serif;
+  outline: none;
+  min-width: 140px;
+}
+
+.language-selector:hover {
+  background: rgba(255,255,255,0.15);
+  border-color: #c19e5c;
+}
+
+.language-selector:focus {
+  border-color: #c19e5c;
+  box-shadow: 0 0 0 2px rgba(193,158,92,0.2);
+}
+
+.language-selector option {
+  background: #002156;
+  color: #fff;
+  padding: 0.5rem;
+}

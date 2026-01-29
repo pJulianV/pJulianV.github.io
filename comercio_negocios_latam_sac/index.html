@@ -29,7 +29,7 @@
   <meta name="twitter:image" content="https://cynlatam.com/img/Icon.jpeg">
   
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="css/style.css?v=2">
+  <link rel="stylesheet" href="/css/style.css?v=2">
   
   <!-- Hreflang for SEO -->
   <link rel="alternate" hreflang="es" href="https://cynlatam.com/" />
@@ -37,11 +37,33 @@
   <link rel="alternate" hreflang="x-default" href="https://cynlatam.com/" />
 </head>
 <body>
+    <!-- Botón flotante para abrir/minimizar el AI (junto a WhatsApp) -->
+    <button id="ai-toggle-btn" aria-label="Abrir asistente AI" style="position: fixed; bottom: 100px; right: 90px; width: 56px; height: 56px; border-radius: 50%; background: #002156; color: #fff; border: none; box-shadow: 0 4px 16px rgba(0,0,0,0.18); z-index: 10000; display: flex; align-items: center; justify-content: center; font-size: 28px; cursor: pointer; transition: background 0.2s;">
+      <span id="ai-toggle-icon" style="display: block;">🤖</span>
+    </button>
+    <!-- Chatbot AI UI (solo interfaz, sin funcionalidad) -->
+    <div id="ai-chatbot-widget" style="position: fixed; bottom: 100px; right: 24px; width: 340px; max-width: 90vw; z-index: 9999; font-family: 'Poppins', Arial, sans-serif; box-shadow: 0 4px 24px rgba(0,0,0,0.18); border-radius: 16px 16px 8px 8px; background: #fff; display: none; flex-direction: column;">
+      <div style="background: #002156; color: #fff; padding: 12px 16px; border-radius: 16px 16px 0 0; display: flex; align-items: center; justify-content: space-between;">
+        <span style="font-weight: 600;">Asistente AI</span>
+        <button style="background: none; border: none; color: #fff; font-size: 18px; cursor: pointer;" onclick="document.getElementById('ai-chatbot-widget').style.display='none'">×</button>
+      </div>
+      <div style="flex: 1; padding: 16px; overflow-y: auto; min-height: 120px; max-height: 260px; background: #f7f7f7;">
+        <div style="margin-bottom: 12px;">
+          <div style="background: #e6eaf3; color: #222; padding: 10px 14px; border-radius: 12px 12px 12px 4px; max-width: 80%; margin-bottom: 4px; font-size: 15px;">¡Hola! Soy tu asistente AI. ¿En qué puedo ayudarte hoy?</div>
+        </div>
+        <!-- Aquí aparecerán los mensajes del usuario y AI -->
+      </div>
+      <form style="display: flex; border-top: 1px solid #eee; background: #fff;" onsubmit="return false;">
+        <input type="text" placeholder="Escribe tu mensaje..." style="flex: 1; border: none; padding: 12px; font-size: 15px; outline: none; border-radius: 0 0 0 8px;" disabled>
+        <button type="submit" style="background: #002156; color: #fff; border: none; padding: 0 18px; font-size: 16px; border-radius: 0 0 8px 0; cursor: not-allowed;" disabled>Enviar</button>
+      </form>
+      <div style="font-size: 11px; color: #888; text-align: right; padding: 4px 10px 6px 0;">Demo UI - Sin funcionalidad</div>
+    </div>
   <!-- #00183E azul  #c19e5c dorado #EEF0ED blanco  -->
   <header>
     <div class="header-container">
       <div class="logo-wrapper">
-        <img src="img/logoAclaradoAcorta.png" alt="Comercio y Negocios Latam SAC Logo" class="logo">
+        <img src="img/logoSimple.png" alt="Comercio y Negocios Latam SAC Logo" class="logo">
       </div>
       <nav>
         <ul>
@@ -69,7 +91,7 @@
           impulsamos crecimiento.
         </p>
         <p class="hero-tagline">Una empresa del Grupo CASNU</p>
-        <a href="pages/contacto" class="cta-button">Contáctanos</a>
+        <a href="pages/contacto.html" class="cta-button">Contáctanos</a>
       </div>
       <div class="hero-image">
         <img src="img/SanIsidroLima.jpg" alt="Oficinas San Isidro Lima">
@@ -260,7 +282,68 @@
     </div>
   </footer>
   
-  <script src="js/script.js"></script>
+
+  <script type="module" src="js/script.js"></script>
+  <script>
+    // Botón flotante para abrir/minimizar el chat AI
+    const aiBtn = document.getElementById('ai-toggle-btn');
+    const aiWidget = document.getElementById('ai-chatbot-widget');
+    const aiIcon = document.getElementById('ai-toggle-icon');
+    const aiInput = aiWidget.querySelector('input[type="text"]');
+    const aiSend = aiWidget.querySelector('button[type="submit"]');
+
+    // Estado: oculto por defecto
+    aiWidget.style.display = 'none';
+    aiInput.disabled = true;
+    aiSend.disabled = true;
+    aiSend.style.cursor = 'not-allowed';
+
+    let aiOpen = false;
+    aiBtn.addEventListener('click', function() {
+      aiOpen = !aiOpen;
+      if (aiOpen) {
+        aiWidget.style.display = 'flex';
+        aiInput.disabled = false;
+        aiSend.disabled = false;
+        aiSend.style.cursor = 'pointer';
+        aiIcon.textContent = '✖';
+        aiBtn.setAttribute('aria-label', 'Minimizar asistente AI');
+        aiInput.focus();
+      } else {
+        aiWidget.style.display = 'none';
+        aiInput.disabled = true;
+        aiSend.disabled = true;
+        aiSend.style.cursor = 'not-allowed';
+        aiIcon.textContent = '🤖';
+        aiBtn.setAttribute('aria-label', 'Abrir asistente AI');
+      }
+    });
+    // Si el usuario cierra el chat con la X interna, también actualiza el botón
+    aiWidget.querySelector('button').addEventListener('click', function() {
+      aiWidget.style.display = 'none';
+      aiInput.disabled = true;
+      aiSend.disabled = true;
+      aiSend.style.cursor = 'not-allowed';
+      aiIcon.textContent = '🤖';
+      aiBtn.setAttribute('aria-label', 'Abrir asistente AI');
+      aiOpen = false;
+    });
+  </script>
+
+  <!-- WhatsApp Widget Oficial -->
+  <script>
+    (function () {
+      var options = {
+        whatsapp: "51969406930", // Número en formato internacional sin +
+        call_to_action: "¿Necesitas ayuda? Chatea con nosotros!", // Mensaje del botón
+        position: "right", // Posición del widget
+      };
+      var proto = document.location.protocol, host = "getbutton.io", url = proto + "//static." + host;
+      var s = document.createElement('script'); s.type = 'text/javascript'; s.async = true; s.src = url + '/widget-send-button/js/init.js';
+      s.onload = function () { WhWidgetSendButton.init(host, proto, options); };
+      var x = document.getElementsByTagName('script')[0]; x.parentNode.insertBefore(s, x);
+    })();
+  </script>
 </body>
 </html>
 
