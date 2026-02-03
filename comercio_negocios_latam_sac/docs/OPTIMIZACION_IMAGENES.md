@@ -21,7 +21,7 @@
    - Reducir a 100 KB aproximadamente
 
 ### 🟡 PRIORIDAD MEDIA (>150KB):
-5. **logoAclaradoAcorta.png** - 199 KB
+5. **logoSimple.png** - 199 KB
    - Logo usado en header, debe ser más ligero
    - Target: 50-80 KB o convertir a SVG
 
@@ -63,7 +63,7 @@
 - [ ] Reducir logoAcl.png de 476KB a ~100KB
 - [ ] Reducir DesarrolloNeg.jpg de 280KB a ~120KB
 - [ ] Reducir asesoria.jpg de 209KB a ~100KB
-- [ ] Reducir logoAclaradoAcorta.png de 199KB a ~80KB
+- [ ] Reducir logoSimple.png de 199KB a ~80KB
 - [ ] Reducir propuesta.jpg de 162KB a ~100KB
 - [ ] Implementar lazy loading en imágenes
 - [ ] Considerar formato WebP para navegadores modernos

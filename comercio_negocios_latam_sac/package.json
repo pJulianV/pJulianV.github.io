@@ -13,7 +13,8 @@
     "dev": "nodemon server.js",
     "test": "echo 'No tests defined'",
     "lint": "echo 'No lint configured'",
-    "format:check": "echo 'No format check configured'"
+    "format:check": "echo 'No format check configured'",
+    "build": "echo 'No build step required'"
   },
   "keywords": [
     "api",

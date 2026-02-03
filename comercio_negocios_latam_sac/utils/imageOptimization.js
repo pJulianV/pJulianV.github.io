@@ -125,7 +125,7 @@ if (typeof document !== 'undefined') {
     
     // Precargar imágenes críticas (hero, logo)
     preloadCriticalImages([
-      '/img/logoAclaradoAcorta.png',
+      '/img/logoSimple.png',
       '/img/SanIsidroLima.jpg'
     ]);
   });

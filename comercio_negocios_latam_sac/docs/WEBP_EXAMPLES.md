@@ -5,7 +5,7 @@
 
 <picture>
   <source srcset="img/logoAclaradoAcorta.webp" type="image/webp">
-  <img src="img/logoAclaradoAcorta.png" alt="Logo Comercio y Negocios Latam SAC" loading="lazy">
+  <img src="img/logoSimple.png" alt="Logo Comercio y Negocios Latam SAC" loading="lazy">
 </picture>
 
 <picture>

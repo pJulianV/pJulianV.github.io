@@ -379,7 +379,7 @@ const urlsToCache = [
   '/',
   '/css/style.css',
   '/js/script.js',
-  '/img/logoAclaradoAcorta.png',
+  '/img/logoSimple.png',
   '/offline.html'
 ];
 

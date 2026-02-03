@@ -45,7 +45,7 @@ comercio_negocios_latam_sac/
 ├── js/                        # Scripts JavaScript
 │   └── script.js             # Funcionalidad principal (animaciones, observers)
 ├── img/                       # Imágenes y recursos visuales
-│   ├── logoAclaradoAcorta.png
+│   ├── logoSimple.png
 │   ├── Icon.jpeg
 │   ├── SanIsidroLima.jpg
 │   ├── propuesta.jpg

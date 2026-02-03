@@ -12,7 +12,7 @@ const STATIC_ASSETS = [
   '/js/formValidation.js',
   '/js/sanitizer.js',
   '/manifest.json',
-  '/img/logoAclaradoAcorta.png',
+  '/img/logoSimple.png',
   '/img/Icon.jpeg',
   '/offline.html',
 ];

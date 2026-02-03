@@ -6,8 +6,9 @@
   <title>Contact Us - Trade and Business Latam SAC</title>
   <link rel="icon" type="image/jpeg" href="../../img/Icon.jpeg">
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="../../css/style.css?v=2">
-    <script src="../../js/formValidation.js" defer></script>
+  <link rel="stylesheet" href="../../style.css">
+    <!-- <script src="../../js/formValidation.js" defer></script> -->
+    <script src="../../js/contact-form.js" defer></script>
   
   <!-- Hreflang for SEO -->
   <link rel="alternate" hreflang="es" href="https://cynlatam.com/pages/contacto" />
@@ -19,7 +20,7 @@
     <div class="header-container">
       <div class="logo-wrapper">
         <a href="../index.html">
-          <img src="../../img/logoAclaradoAcorta.png" alt="Trade and Business Latam SAC Logo" class="logo">
+          <img src="../../img/logoSimple.png" alt="Trade and Business Latam SAC Logo" class="logo">
         </a>
       </div>
       <nav>
@@ -71,6 +72,8 @@
           <div class="contacto-form-wrapper">
             <h3>Send Us a Message</h3>
             <form class="contacto-form">
+              <!-- Message container for feedback -->
+              <div id="formMessage" class="form-message"></div>
               <div class="form-group">
                 <label for="nombre">NAME</label>
                 <input type="text" id="nombre" name="nombre" required>
@@ -91,7 +94,7 @@
                 <label for="mensaje">MESSAGE</label>
                 <textarea id="mensaje" name="mensaje" rows="6" required></textarea>
               </div>
-              <button type="submit" class="submit-button">SEND MESSAGE</button>
+              <button type="submit" class="submit-button"><span class="btn-text">Send Message</span></button>
             </form>
           </div>
         </div>

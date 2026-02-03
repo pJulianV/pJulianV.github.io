@@ -8,6 +8,7 @@ import { fileURLToPath } from 'url';
 import fs from 'fs';
 import contactRouter from './routes/contact.js';
 import { errorHandler } from './middleware/errorHandler.js';
+import aiChatProxy from './services/aiChatProxy.js';
 
 // Para usar __dirname en ES modules
 const __filename = fileURLToPath(import.meta.url);
@@ -110,6 +111,9 @@ app.get('/api/health', (req, res) => {
 
 // Rutas de contacto
 app.use('/api/contact', contactLimiter, contactRouter);
+
+// Ruta para el proxy seguro de AI
+app.use('/api/ai-chat', aiChatProxy);
 
 // ...existing code...
 
