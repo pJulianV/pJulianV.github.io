@@ -67,7 +67,7 @@ export const sendContactEmail = async (data) => {
               </div>
             </div>
             <div class="footer">
-              <p>Sent from <strong>julianvargasdev.com</strong> contact form</p>
+              <p>Sent from <strong>davidswe.com</strong> contact form</p>
             </div>
           </div>
         </body>

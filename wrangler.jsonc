@@ -7,7 +7,7 @@
   },
   "routes": [
     {
-      "pattern": "julianvargasdev.com/*",
+      "pattern": "davidswe.com/*",
       "zone_id": "your_zone_id"
     }
   ],

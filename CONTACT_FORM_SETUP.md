@@ -4,7 +4,7 @@
 This portfolio uses Cloudflare Pages Functions to handle contact form submissions via the Resend email service.
 
 ## Current Status ⚠️
-The contact form at `https://julianvargasdev.com/api/contact` needs to be configured with your Resend API key to function properly.
+The contact form at `https://davidswe.com/api/contact` needs to be configured with your Resend API key to function properly.
 
 ## Setup Instructions
 
@@ -18,7 +18,7 @@ There are two ways to add your API key:
 
 #### Option A: Via Cloudflare Dashboard (Recommended)
 1. Log into [Cloudflare Dashboard](https://dash.cloudflare.com)
-2. Go to **Pages** > Select your project (`julianvargasdev.com`)
+2. Go to **Pages** > Select your project (`davidswe.com`)
 3. Navigate to **Settings** > **Environment Variables**
 4. Click **Add variable**
 5. Name: `RESEND_API_KEY`
@@ -35,7 +35,7 @@ npm install -g wrangler
 wrangler login
 
 # Add the secret (replace YOUR_API_KEY)
-wrangler pages secret put RESEND_API_KEY --project-name=julianvargasdev
+wrangler pages secret put RESEND_API_KEY --project-name=davidswe
 # Then paste your API key when prompted
 ```
 
@@ -49,11 +49,11 @@ After adding the environment variable, you need to redeploy:
 To use a custom sender email instead of `onboarding@resend.dev`:
 
 1. In Resend dashboard, go to **Domains**
-2. Add your domain `julianvargasdev.com`
+2. Add your domain `davidswe.com`
 3. Add the DNS records Resend provides
 4. Update line 52 in `/functions/api/contact.js`:
    ```javascript
-   from: 'Julian Vargas <noreply@julianvargasdev.com>',
+   from: 'Julian Vargas <noreply@davidswe.com>',
    ```
 
 ## File Structure
@@ -125,7 +125,7 @@ If you encounter issues:
 2. Review Resend API dashboard for error details
 3. Test with curl:
    ```bash
-   curl -X POST https://julianvargasdev.com/api/contact \
+   curl -X POST https://davidswe.com/api/contact \
      -H "Content-Type: application/json" \
      -d '{
        "firstName": "Test",

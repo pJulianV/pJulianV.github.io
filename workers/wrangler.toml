@@ -7,8 +7,8 @@ workers_dev = true
 
 # No routes for now - will use workers.dev subdomain first
 # [[routes]]
-# pattern = "julianvargasdev.com/api/contact"
-# zone_name = "julianvargasdev.com"
+# pattern = "davidswe.com/api/contact"
+# zone_name = "davidswe.com"
 
 # Environment variables (secrets should be added via CLI or dashboard)
 # Add your RESEND_API_KEY as a secret:

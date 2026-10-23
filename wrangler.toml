@@ -9,7 +9,7 @@ command = ""
 # Route configuration for Cloudflare Pages
 [env.production]
 routes = [
-  { pattern = "julianvargasdev.com/api/contact", custom_domain = true }
+  { pattern = "davidswe.com/api/contact", custom_domain = true }
 ]
 
 # Environment variables (secrets should be added via CLI or dashboard)

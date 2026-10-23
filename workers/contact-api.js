@@ -60,7 +60,7 @@ export default {
         },
         body: JSON.stringify({
           from: 'Portfolio Contact <onboarding@resend.dev>', // Change this to your verified domain
-          to: 'julian.vargasdev@gmail.com', // Your email
+          to: 'julianvargastrb@gmail.com', // Your email
           reply_to: email,
           subject: `Portfolio Contact: ${subject}`,
           html: `
@@ -157,7 +157,7 @@ export default {
                   </div>
                 </div>
                 <div class="footer">
-                  <p>This message was sent from your portfolio contact form at julianvargasdev.com</p>
+                  <p>This message was sent from your portfolio contact form at davidswe.com</p>
                 </div>
               </body>
             </html>

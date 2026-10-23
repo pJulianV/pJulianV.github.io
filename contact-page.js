@@ -4,6 +4,10 @@ document.addEventListener('DOMContentLoaded', () => {
     const submitBtn = form.querySelector('.submit-btn');
     const formMessage = document.getElementById('formMessage');
 
+    // Ruta relativa: siempre apunta al dominio desde el que se carga la página
+    // (davidswe.com/api/contact). Si el Worker usa otra URL, cámbiala aquí.
+    const CONTACT_ENDPOINT = '/api/contact';
+
     form.addEventListener('submit', async (e) => {
         e.preventDefault();
 
@@ -24,7 +28,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
         try {
             // Send to Cloudflare Worker endpoint
-            const response = await fetch('https://julianvargasdev.com/api/contact', {
+            const response = await fetch(CONTACT_ENDPOINT, {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',
@@ -32,7 +36,13 @@ document.addEventListener('DOMContentLoaded', () => {
                 body: JSON.stringify(formData)
             });
 
-            const result = await response.json();
+            // Si la respuesta no es JSON (por ejemplo un 404 en HTML), no rompe el flujo
+            let result = {};
+            try {
+                result = await response.json();
+            } catch (_) {
+                result = {};
+            }
 
             if (response.ok) {
                 showMessage('success', 'Message sent successfully! I\'ll get back to you soon.');
@@ -46,11 +56,11 @@ document.addEventListener('DOMContentLoaded', () => {
                     });
                 }
             } else {
-                throw new Error(result.error || 'Failed to send message');
+                throw new Error(result.error || `Failed to send message (HTTP ${response.status})`);
             }
         } catch (error) {
             console.error('Form submission error:', error);
-            showMessage('error', 'Failed to send message. Please try emailing me directly at julian.vargasdev@gmail.com');
+            showMessage('error', 'Failed to send message. Please try emailing me directly at julianvargastrb@gmail.com');
             
             // Track failed submission (if you use analytics)
             if (typeof gtag !== 'undefined') {
